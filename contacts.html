@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <title>LaBamBa: Movie Recommender and Reviews</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Chivo:700|Overpass:400,700&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        // cnanot access higher level due to security concenrs
+
+        window.onload = function () {
+            // in javascript no higher level access
+            // passing the var to d3 object may not have any outputs
+            // d3 object is not a dom object
+            d3.csv("/data/top250.csv")
+                .row(function (d) {
+                    title = d.Title
+                    runtime = parseInt(d.Runtime)
+                    $("#table_messages").append(
+                        "<tr><td>" + title + "</td><td>" + runtime + "</td></tr>"
+                    )
+                    // return {
+                    //     title: d.Title,
+                    //     runtime: parseInt(d.Runtime)
+                    // // appending jquery
+
+                    //     )
+                    // }
+                })
+                .get(function (data) {
+                    console.log(data);
+
+                })
+        }
+    </script>
+</head>
+
+<body>
+    <table id="table_messages">
+        <tr>
+            <td>user</td>
+            <td>message</td>
+        </tr>
+    </table>
+
+    <!-- contact card -->
+    <div class="container">
+        <h2>Explore more here</h2>
+        <!-- Cards container -->
+        <div class="cards">
+
+            <!-- Home -->
+            <a href="index.html">
+                <div class="card-white">
+                    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                        alt="">
+                    <h3>Back to Home!</h3>
+                    <p>Go to home page or find Promotions!</p>
+                </div>
+            </a>
+
+
+
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <div class="footer">
+        <div class="container">
+            <p>Website made with ❤️ by &copyLaBamBa 2022</p>
+        </div>
+    </div>
+
+    <script> </script>
+</body>
+
+</html>
+
+
+<!-- https://codepen.io/tyler-chipman/pen/qBPoGKE did not work -->
+<!-- https://appcode.app/how-to-create-an-html-carousel/ -->
