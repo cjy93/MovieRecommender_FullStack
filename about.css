@@ -75,6 +75,7 @@ html{
     height: 12px;
     background: rgba(248, 245, 245, 0.4);
     margin: 0 12px;
+    cursor: pointer;
 }
 
 .carousel__indicator.current-slide{
@@ -84,4 +85,8 @@ html{
 .carousel__button{
     background-color: white;
     opacity: 0.5;
+}
+
+.is-hidden{
+    display: none;
 }
