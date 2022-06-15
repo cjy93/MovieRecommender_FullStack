@@ -4,7 +4,7 @@ html{
 .carousel{
     position: relative;
     height: 300px;
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     ;
 }
@@ -51,11 +51,11 @@ html{
 }
 
 .carousel__button--left{
-    left: -40px;
+    left: -30px;
 }
 
 .carousel__button--right{
-    right: -40px;
+    right: -30px;
 }
 .carousel__button img{
     width: 12px;
