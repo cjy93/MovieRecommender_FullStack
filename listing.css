@@ -1,0 +1,71 @@
+/* Table Styles */
+html{
+    background-color: black;
+}
+
+table#table_messages{
+    background: black;
+    border: 15px outset rgb(247, 243, 243);
+    border-collapse: collapse;
+    font-family: Arial, Verdana, sans-serif;
+    width: 100%;  /* 100% of parent container */
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content:center;   
+    
+ }
+
+ /* table style that works with div only */
+ #table_container{
+    overflow-y: auto;
+    height: 1000px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ /* styling for each cell  */
+table#table_messages th, table#table_messages td{
+    border: 1px solid white;
+    padding: 5px;
+    vertical-align: top;   /* default is middle*/ 
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.2em;
+ }
+
+/* styling for hyperlinks */
+a {
+	color: white;
+	text-decoration: none;
+	display: block;
+	margin-bottom: 8%;
+}
+a:visited {
+	color: grey;
+}
+a:hover {
+	background-color: rgba(151,151,151,0.5);
+	color: white;
+}
+a:focus {
+	outline: thin dotted;
+}
+a:hover, a:active {
+	outline: 0;
+}
+
+/* Search bar */
+#myInput {
+    background: rgb(255,255,255) url('https://c.neh.tw/thumb/f/720/m2i8i8m2G6d3A0Z5.jpg')
+   right/contain no-repeat; 
+    width: 50%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    justify-content:center;
+    margin: 12px auto;
+    display: block;
+  }
+  

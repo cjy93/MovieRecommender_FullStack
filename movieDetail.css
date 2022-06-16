@@ -1,0 +1,38 @@
+body {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1020px;
+	min-width: 640px;
+}
+
+body > article {
+	width: 60%;
+	float: left;
+	margin-left: 2%;
+	margin-right: 12%;
+    border: 10px
+}
+
+body > aside#movieDetails {
+	width: 24%;
+	float: left;
+	margin-right: 2%;
+}
+
+span.stars{
+    font-size: 100%; 
+    color: yellow;
+}
+
+div.container{
+    clear:both;
+    justify-content: center;
+}
+
+p{
+    line-height: 1.6;
+}
+
+aside{
+    font-size: 0.8em;
+}

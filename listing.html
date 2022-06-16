@@ -6,27 +6,43 @@
     <link href="https://fonts.googleapis.com/css?family=Chivo:700|Overpass:400,700&display=swap" rel="stylesheet">
     <script src="index.js"></script>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="listing.css">
 
 
-    <!-- 
-    <!-- <script>
-    window.onload = function () {
-        d3.select("body").append("p").text("third");
-        d3.select("div").insert("p").text("Second paragraph.");
-        d3.select("a")
-    }
-</script> -->
     <script>
-        // cnanot access higher level due to security concenrs
-
+        // be sure to leave functions outside of "window.onload"!
+        // create a function to search your table based on search box
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("table_messages");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1];
+                console.log(td)
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    console.log(td.textContent)
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
         window.onload = function () {
             // in javascript no higher level access
             // passing the var to d3 object may not have any outputs
             // d3 object is not a dom object
+            // js cannot access higher folder level due to security concenrs
             d3.csv("data/2022_movies.csv")
                 .row(function (d) {
                     poster = "<a href='" + d.links + "'><img src='" + d.small_posters + "'></a>"
-                    movie = "<a href='" + d.links + "'>" + d.movie + "</a>"
+                    // movie = "<a href='" + d.links + "'>" + d.movie + "</a>"
+                    movie = "<a href='about.html'>" + d.movie + "</a>"
                     runtime = parseInt(d.runtime)
                     year = parseInt(d.year)
                     genres = d.genres
@@ -35,36 +51,50 @@
                     $("#table_messages").append(
                         "<tr><td>" + poster + "</td><td>" + movie + "</td><td>" + runtime + "</td><td>" + year + "</td><td>" + genres + "</td><td>" + rating + "</td><td>" + metascore + "</td></tr>"
                     )
-                    // return {
-                    //     title: d.Title,
-                    //     runtime: parseInt(d.Runtime)
-                    // // appending jquery
 
-                    //     )
-                    // }
                 })
                 .get(function (data) {
                     console.log(data);
 
                 })
+            // find out which movie name was selected when clicked
+            $(document).on("click", "a", function () {
+                //this == the link that was clicked
+                var href = $(this).attr("href");
+                var text = $(this).text()
+                alert("You're trying to go to " + text);
+            });
+
+            // local storage for the name so in the next page you can generate the movieDetail.html based on this information
+
+            // first scrape the movie star avatar photos
         }
+
+
+
     </script>
 </head>
 
 <body>
-    <a href=""><img src="" alt=""></a>
-    <img src="" alt="">
-    <table id="table_messages">
-        <tr>
-            <td>Poster</td>
-            <td>Movie</td>
-            <td>Runtime(mins)</td>
-            <td>Year</td>
-            <td>Genres</td>
-            <td>Rating</td>
-            <td>Metascores</td>
-        </tr>
-    </table>
+
+    <div>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for movie title"
+            title="Type in a movie name">
+    </div>
+    <div id="table_container">
+        <table id="table_messages">
+            <tr class="header">
+                <th>Poster</th>
+                <th>Movie</th>
+                <th>Runtime(mins)</th>
+                <th>Year</th>
+                <th>Genres</th>
+                <th>Rating</th>
+                <th>Metascores</th>
+            </tr>
+        </table>
+    </div>
+
 
     <!-- contact card -->
     <div class="container">
@@ -108,3 +138,5 @@
 
 <!-- https://codepen.io/tyler-chipman/pen/qBPoGKE did not work -->
 <!-- https://appcode.app/how-to-create-an-html-carousel/ -->
+
+<!-- Tutorial on search bar and filter table: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_filter_table -->

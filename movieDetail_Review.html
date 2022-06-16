@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+    <link href="https://fonts.googleapis.com/css?family=Chivo:700|Overpass:400,700&display=swap" rel="stylesheet">
+    <script src="about.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="movieDetail.css">
+    <script>
+        // This segment "includeHTML()" is from a W3 schools tutorial at https://www.w3schools.com/howto/tryit.asp?filename=tryhow_html_include_1
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /*loop through a collection of all HTML elements:*/
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /*make an HTTP request using the attribute value as the file name:*/
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                            /*remove the attribute, and call this function once more:*/
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /*exit the function:*/
+                    return;
+                }
+            }
+        };
+
+        // To check which movie I should display for Review based on the last movie title/name chosen in `listing.html`
+        window.onload = function () {
+            // d3.csv("data/2022_movies.csv")
+            //     .row(function (d) {
+            //         poster = "<a href='" + d.links + "'><img src='" + d.small_posters + "'></a>"
+            //         // movie = "<a href='" + d.links + "'>" + d.movie + "</a>"
+            //         movie = "<a href='about.html'>" + d.movie + "</a>"
+            //         runtime = parseInt(d.runtime)
+            //         year = parseInt(d.year)
+            //         genres = d.genres
+            //         rating = '<span style="font - size: 300 %; color: yellow; ">&starf;</span>' + d.imdb
+            //         metascore = d.metascore
+            //         $("#table_messages").append(
+            //             "<tr><td>" + poster + "</td><td>" + movie + "</td><td>" + runtime + "</td><td>" + year + "</td><td>" + genres + "</td><td>" + rating + "</td><td>" + metascore + "</td></tr>"
+            //         )
+
+            //     })
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="movieName">
+        <div w3-include-html="reviews_per_movie/topGun.html"></div>
+    </div>
+
+
+    <script>
+        includeHTML();
+    </script>
+    <!-- contact card -->
+    <div class="container">
+        <h2>Explore more here</h2>
+        <!-- Cards container -->
+        <div class="cards">
+
+            <!-- Home -->
+            <a href="index.html">
+                <div class="card-white">
+                    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                        alt="">
+                    <h3>Back to Home!</h3>
+                    <p>Go to home page or find Promotions!</p>
+                </div>
+            </a>
+            <!-- back to listing page-->
+            <a href="listing.html">
+                <div class="card-white">
+                    <img src="https://images.unsplash.com/photo-1563381013529-1c922c80ac8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1113&q=80"
+                        alt="">
+                    <h3>Back to Movie Listings!</h3>
+                    <p>Go movie listings page to find another movie!</p>
+                </div>
+            </a>
+
+            <!-- back to movie details page-->
+            <a href="movieDetails.html">
+                <div class="card-white">
+                    <img src="https://images.unsplash.com/photo-1623939012322-f19aa1539760?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                        alt="">
+                    <h3>Back to Movie Details!</h3>
+                    <p>Go to Movie Details page to find out more about this movie!</p>
+                </div>
+            </a>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!-- tutorial on how to include html from another html is included below -->
+<!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_html_include_1 -->
+<!-- https://www.w3schools.com/howto/howto_html_include.asp -->

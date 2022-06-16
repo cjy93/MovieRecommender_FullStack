@@ -1,12 +1,13 @@
 body {
   font-family: Overpass;
-  color: #404042;
+  color: rgb(175, 169, 169);
   font-size: 18px;
   margin: 0;
+  background-color: black;
 }
 
 h1, h2, h3 {
-  color: #404042;
+  color: rgb(109, 107, 107);
   font-family: Chivo;
 }
 
@@ -64,6 +65,7 @@ a{
   padding: 24px;
   margin: 8px;
   flex-grow: 1;
+  height: 350px;
 }
 
 .card-white img {
