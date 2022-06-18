@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testing</title>
     <link href="https://fonts.googleapis.com/css?family=Chivo:700|Overpass:400,700&display=swap" rel="stylesheet">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="movieDetail.css">
     <script>
+        // This function "includeHTML()" is to allow you to call another HTML from this HTML document. This is because the other HTML document keeps part of the code that is meant to be from this document. Prevent repeat of information
         // This segment "includeHTML()" is from a W3 schools tutorial at https://www.w3schools.com/howto/tryit.asp?filename=tryhow_html_include_1
         function includeHTML() {
             var z, i, elmnt, file, xhttp;
@@ -43,33 +45,23 @@
 
         // To check which movie I should display for Review based on the last movie title/name chosen in `listing.html`
         window.onload = function () {
-            // d3.csv("data/2022_movies.csv")
-            //     .row(function (d) {
-            //         poster = "<a href='" + d.links + "'><img src='" + d.small_posters + "'></a>"
-            //         // movie = "<a href='" + d.links + "'>" + d.movie + "</a>"
-            //         movie = "<a href='about.html'>" + d.movie + "</a>"
-            //         runtime = parseInt(d.runtime)
-            //         year = parseInt(d.year)
-            //         genres = d.genres
-            //         rating = '<span style="font - size: 300 %; color: yellow; ">&starf;</span>' + d.imdb
-            //         metascore = d.metascore
-            //         $("#table_messages").append(
-            //             "<tr><td>" + poster + "</td><td>" + movie + "</td><td>" + runtime + "</td><td>" + year + "</td><td>" + genres + "</td><td>" + rating + "</td><td>" + metascore + "</td></tr>"
-            //         )
+            //     '<div w3-include-html="reviews_per_movie/{{lo}}.html"></div>'           // )
 
-            //     })
+            alert(localStorage['id'])
 
         }
     </script>
 </head>
 
 <body>
-    <div class="movieName">
-        <div w3-include-html="reviews_per_movie/topGun.html"></div>
+    <div id="movieName">
+
+
     </div>
 
 
     <script>
+        $("#movieName").append("<div w3-include-html='reviews_per_movie/" + localStorage['id'] + ".html'></div>");
         includeHTML();
     </script>
     <!-- contact card -->

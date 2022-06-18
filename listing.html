@@ -38,11 +38,12 @@
             // passing the var to d3 object may not have any outputs
             // d3 object is not a dom object
             // js cannot access higher folder level due to security concenrs
-            d3.csv("data/2022_movies.csv")
+            d3.csv("data/2022_movies_final.csv")
                 .row(function (d) {
-                    poster = "<a href='" + d.links + "'><img src='" + d.small_posters + "'></a>"
+                    id = d.id
+                    poster = "<a id='poster' href='movieDetail.html' alt='" + d.id + "'><img src='" + d.small_posters + "'></a>"
                     // movie = "<a href='" + d.links + "'>" + d.movie + "</a>"
-                    movie = "<a href='about.html'>" + d.movie + "</a>"
+                    movie = "<a id='name' href='movieDetail.html' alt='" + d.id + "'>" + d.movie + "</a>"
                     runtime = parseInt(d.runtime)
                     year = parseInt(d.year)
                     genres = d.genres
@@ -57,12 +58,22 @@
                     console.log(data);
 
                 })
+
             // find out which movie name was selected when clicked
             $(document).on("click", "a", function () {
                 //this == the link that was clicked
-                var href = $(this).attr("href");
-                var text = $(this).text()
-                alert("You're trying to go to " + text);
+                if ($(this).attr("id") === "poster") {
+                    var id = $(this).attr('alt')
+                    alert(id)
+                } else if ($(this).attr("id") === "name") {
+                    var id = $(this).attr('alt')
+                }
+                var href = $(this).attr("href"); // link to where you want to head to
+                // var text = $(this).text() // movie name
+                alert("You're trying to go to " + id);
+                // add localStorage so I know which link to go to
+                localStorage['id'] = id;
+                location.href('movieDetail_Review.html')
             });
 
             // local storage for the name so in the next page you can generate the movieDetail.html based on this information
@@ -76,7 +87,6 @@
 </head>
 
 <body>
-
     <div>
         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for movie title"
             title="Type in a movie name">
