@@ -19,10 +19,10 @@ body > aside#movieDetails {
 	margin-right: 2%;
 }
 
-span.stars{
+/* span.stars{
     font-size: 100%; 
     color: yellow;
-}
+} */
 
 div.container{
     clear:both;
@@ -36,3 +36,14 @@ p{
 aside{
     font-size: 0.8em;
 }
+
+img.icon-star-full {
+	width: 20px;
+	height: 20px;	
+}
+
+img.icon-star-half {
+    width: 20px;
+	height: 20px;
+}
+
