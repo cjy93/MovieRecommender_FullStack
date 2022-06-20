@@ -38,7 +38,7 @@
             // passing the var to d3 object may not have any outputs
             // d3 object is not a dom object
             // js cannot access higher folder level due to security concenrs
-            d3.csv("data/2022_movies_final.csv")
+            d3.csv("data/2022_movies_final_merged.csv")
                 .row(function (d) {
                     id = d.id
                     poster = "<a id='poster' href='movieDetail.html' alt='" + d.id + "'><img src='" + d.small_posters + "'></a>"
