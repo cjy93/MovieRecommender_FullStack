@@ -4,16 +4,74 @@
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <title>LaBamBa: Movie Recommender and Reviews</title>
     <link href="https://fonts.googleapis.com/css?family=Chivo:700|Overpass:400,700&display=swap" rel="stylesheet">
-    <script src="index.js"></script>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="movieDetail.css">
+
+    <script>
+        window.onload = function () {
+            // in javascript no higher level access
+            // passing the var to d3 object may not have any outputs
+            // d3 object is not a dom object
+            // js cannot access higher folder level due to security concenrs
+            console.log("localstorage", localStorage['id'])
+            var i = localStorage['id']
+            d3.csv("data/2022_movies_final_merged.csv")
+                // filter the row corresponding with the id in localStorage['id']
+                .get(function (data) {
+                    data_new = data.filter(function (row) {
+                        return row['id'] == localStorage['id']
+                    })
+                    console.log(data_new[0]);
+                    // let data_new[0] have a shorter var name "d"
+                    var d = data_new[0]
+                    // append values extracted from the data row
+                    $('#title_and_year').append("<h1>" + d.movie + " (" + d.year + ") </h1>")
+                    $('#poster_and_video').append("<img id='poster' src='" + d.small_posters + "'><iframe id='video' src='" + d.youtube + "'></iframe>")
+                    $('#storyPlot').append("<p>" + d.storyPlot + "</p>")
+                })
 
 
+
+        }
+    </script>
 
 </head>
 
 <body>
+    <section class="mainBody">
+        <div id="title_and_year"></div>
 
+        <div id="poster_and_video">
+        </div>
+
+        <div id="storyPlot"></div>
+        <div id="rating_and_timing"></div>
+
+        <div id="photos"></div>
+        </div>
+    </section>
+
+    <section class="recommendations">
+        <aside class="recommend">
+            <h1 class="h1Aside">Recommendations</h1>
+            <img src="https://m.media-amazon.com/images/M/MV5BMmIwZDMyYWUtNTU0ZS00ODJhLTg2ZmEtMTk5ZmYzODcxODYxXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UY209_CR0,0,140,209_AL_.jpg"
+                alt="">
+            <p>Top Gun: Maverick</p>
+            <img src="https://m.media-amazon.com/images/M/MV5BNWM0ZGJlMzMtZmYwMi00NzI3LTgzMzMtNjMzNjliNDRmZmFlXkEyXkFqcGdeQXVyMTM1MTE1NDMx._V1_UY209_CR0,0,140,209_AL_.jpg"
+                alt="">
+            <p>Doctor Strange in the Multiverse of Madness</p>
+            <img src="https://m.media-amazon.com/images/M/MV5BMDdmMTBiNTYtMDIzNi00NGVlLWIzMDYtZTk3MTQ3NGQxZGEwXkEyXkFqcGdeQXVyMzMwOTU5MDk@._V1_UY209_CR0,0,140,209_AL_.jpg"
+                alt="">
+            <p>The Batman</p>
+            <img src="https://m.media-amazon.com/images/M/MV5BYjdhYTE3NjMtZjI3OC00NzVlLWFiNTUtNzQ3NDNiNTI3NDg4XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UY209_CR0,0,140,209_AL_.jpg"
+                alt="">
+            <p>Hustle</p>
+            <img src="https://m.media-amazon.com/images/M/MV5BOGI5N2FhNzktZjZlNi00MmRjLWE1MmUtNjRlNzQyOGMzYjNhXkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_UY209_CR0,0,140,209_AL_.jpg"
+                alt="">
+            <p>Memory</p>
+        </aside>
+    </section>
 
 
     <!-- contact card -->
@@ -40,20 +98,20 @@
                     <p>Go to home page or find Promotions!</p>
                 </div>
             </a>
-
-
         </div>
     </div>
 
+
+
+    <script> </script>
     <!-- Footer section -->
     <div class="footer">
         <div class="container">
             <p>Website made with ❤️ by &copyLaBamBa 2022</p>
         </div>
     </div>
-
-    <script> </script>
 </body>
+
 
 </html>
 

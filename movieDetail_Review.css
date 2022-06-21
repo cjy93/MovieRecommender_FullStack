@@ -1,12 +1,20 @@
 body {
 	margin: 0 auto;
-	width: 95%;
-	max-width: 1300px;
-	min-width: 700px;
+	width: 80%;
+	max-width: 1020px;
+	min-width: 640px;
+	font-size: 1.3em;
 }
 
+article {
+	width: 65%;
+	float: left;
+	margin-left: 2%;
+	margin-right: 9%;
+    border: 10px;
+}
 
-body > aside#recommend {
+section{
 	width: 20%;
 	float: right;
 	margin-right: 2%;
@@ -40,23 +48,15 @@ img.icon-star-half {
 	height: 20px;
 }
 
-div#poster_and_video{
-	justify-content: center;
-	margin-left: 0%;
-}
+
 
 img#poster{
-	height:320px;
+	height:315px;
 	padding:20px;
 	border: 0.5px solid lightgrey;
 }
 
-iframe#video{
-	width:560px;
-	height:320px;
-	padding: 20px;
-	border: 0.5px solid lightgrey;
-}
+
 
 /* Stretching the footer to both ends of the web browser */
 div.footer{
@@ -67,53 +67,22 @@ div.footer{
 	clear: both;
 }
 
-/* make some room for "recommendations" segment on the right */
-section.mainBody{
-	margin: 0 auto;
-	float: left;
-	width: 70%;
-}
-/* Move some component away from left */
-h1, h2, h3, h3 ~p{
-	margin-left: 0%;
-	border: 10px;
-	font-size: 2em;
-}
 
-/* Select h1 from the "recommendations" panel to align properly */
-h1.h1Aside{
-	margin-left: 2%;
-	font-size: 1.6em;
-	border:none;
-}
 
-/* Shift "Explore more here" from the header of the cards back to proper position */
-div.container>h2{
-	margin-left: 10px; 
-}
-
-/* Put recommendations to the right of the page */
-section.recommendations{
-	float:right;
-}
-
-/* Put recommendations to the right of the page */
-section.recommendations p{
-	margin-top: 3px;
-}
 
 /* adjust card position since we now have 2 cards not 3 */
 .cards {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 16px;
 	font-size: 1em;
   }
-  
+
 /* Reduce back the font size, since the css above has enlarged the size in the white cards */
 div.card-white>h3, div.card-white>p{
-	font-size:1.1em;
+	font-size:1em;
 }
+  
   
   @media (min-width: 300px) {
 	.container {
@@ -138,7 +107,7 @@ div.card-white>h3, div.card-white>p{
 	  width: 900px;
 	}
 	.cards {
-	  grid-template-columns: 1fr 1fr;
+	  grid-template-columns: 1fr 1fr 1fr;
 	}
   }
   

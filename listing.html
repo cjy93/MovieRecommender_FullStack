@@ -58,7 +58,7 @@
                     console.log(data);
 
                 })
-
+            // You can click on poster or movie name and it will take you to the movieDetail.html
             // find out which movie name was selected when clicked
             $(document).on("click", "a", function () {
                 //this == the link that was clicked
@@ -73,7 +73,7 @@
                 alert("You're trying to go to " + id);
                 // add localStorage so I know which link to go to
                 localStorage['id'] = id;
-                location.href('movieDetail_Review.html')
+                location.href('movieDetail.html')
             });
 
             // local storage for the name so in the next page you can generate the movieDetail.html based on this information
