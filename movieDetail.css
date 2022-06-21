@@ -77,7 +77,7 @@ section.mainBody{
 h1, h2, h3, h3 ~p{
 	margin-left: 0%;
 	border: 10px;
-	font-size: 2em;
+	font-size: 1.5em;
 }
 
 /* Select h1 from the "recommendations" panel to align properly */
