@@ -2,7 +2,9 @@ body {
 	margin: 0 auto;
 	width: 95%;
 	max-width: 1300px;
-	min-width: 700px;
+	min-width: 1017px;
+	margin-left: auto;
+	margin-right: auto;/*The margin auto is the centering*/
 }
 
 
@@ -29,6 +31,8 @@ p{
 aside{
     font-size: 0.8em;
 }
+
+
 
 img.icon-star-full {
 	width: 20px;
@@ -66,9 +70,14 @@ div.footer{
   	right: 0;
 	clear: both;
 }
+/* Footer font white */
+div.footer p{
+	color: white;
+}
 
 /* make some room for "recommendations" segment on the right */
 section.mainBody{
+	display:block;
 	margin: 0 auto;
 	float: left;
 	width: 70%;
@@ -77,8 +86,35 @@ section.mainBody{
 h1, h2, h3, h3 ~p{
 	margin-left: 0%;
 	border: 10px;
-	font-size: 1.5em;
+	font-size: 1.4em;
 }
+
+/* Actors styling*/
+div.col-1-4{
+	width:25%;
+}
+div[class^="col-"]{/*All div with class starts with "col-"*/
+	float: left;
+	padding: 2%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+ }
+ .circle {
+    width: relative;
+    height: relative;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10%;
+	border: 2px solid white;
+}
+div.actorNames, div.actorAs{
+	font-size: 0.7em;
+}
+.circle img{
+	display: block;
+	width: 100%;
+ }
 
 /* Select h1 from the "recommendations" panel to align properly */
 h1.h1Aside{
@@ -92,15 +128,28 @@ div.container>h2{
 	margin-left: 10px; 
 }
 
-/* Put recommendations to the right of the page */
-section.recommendations{
-	float:right;
-}
 
-/* Put recommendations to the right of the page */
-section.recommendations p{
-	margin-top: 3px;
-}
+
+/* Review button styles */
+.button {
+	background-color: #efefef;
+	color: Black;
+	border: none;
+	text-align: center;
+	font-size: 1.1em;
+	padding: 10px 20px;
+	font-style: italic;
+  }
+
+  .rounded-corners {
+	border-radius: 5px;
+  }
+
+  .button:hover{
+	background-color: rgb(252, 247, 247);
+	font-weight: 600;
+	cursor: pointer;
+  }
 
 /* adjust card position since we now have 2 cards not 3 */
 .cards {
@@ -142,3 +191,62 @@ div.card-white>h3, div.card-white>p{
 	}
   }
   
+  /* styling for hyperlinks */
+a {
+	color: lightgrey;
+	text-decoration: none;
+	display: block;
+	margin-bottom: 8%;
+}
+/* a:visited {
+	color: grey;
+} */
+a:hover {
+	background-color: black;
+	/* color: white; */
+	cursor: pointer;
+}
+a:focus {
+	outline: thin dotted;
+}
+a:hover, a:active {
+	outline: 0;
+	cursor: pointer;
+}
+
+/* Recommendations styling */
+/* Put recommendations to the right of the page */
+section.recommendations{
+	display: block;
+	float:right;
+}
+
+/* Put recommendations to the right of the page */
+section.recommendations p{
+	margin-top: 3px;
+}
+/* Change hyperlink styling for Recommendations */
+section.recommendations img:hover{
+	background-color: none;
+	border: 5px solid white;
+}
+section.recommendations p:hover{
+	font-weight: 1000;
+}
+
+/* whitecards, bring effect back to the whitecards to show grey background when hover*/
+.container a:hover{
+	background-color: grey;
+	color: black;
+	cursor: pointer;
+}
+/* whitecards, bring back the original grey font before hover */
+.container p{
+	color: rgb(27, 27, 27);
+	/* color: white; */
+}
+/* White cards. This is for the white-cards, as the background is white, the font cannot be seen */
+.card-white:hover, .card-white:active {
+	color: rgb(26, 19, 19);
+	cursor: pointer;
+}

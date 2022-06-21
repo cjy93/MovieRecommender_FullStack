@@ -55,7 +55,11 @@ a:focus {
 a:hover, a:active {
 	outline: 0;
 }
-
+/* This is for the white-cards, as the background is white, the font cannot be seen */
+.card-white:hover, .card-white:active {
+	color: rgb(26, 19, 19);
+	cursor: pointer;
+}
 /* Search bar */
 #myInput {
     background: rgb(255,255,255) url('https://c.neh.tw/thumb/f/720/m2i8i8m2G6d3A0Z5.jpg')

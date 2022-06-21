@@ -27,15 +27,26 @@
                     var d = data_new[0]
                     // append values extracted from the data row
                     $('#title_and_year').append("<h1>" + d.movie + " (" + d.year + ") </h1>")
-                    $('#poster_and_video').append("<img id='poster' src='" + d.small_posters + "'><iframe id='video' src='" + d.youtube + "'></iframe>")
+                    // Allow video to autoplay with syntax "?autoplay=1&mute=1" right behind emded Youtube link, ref:https://stackoverflow.com/questions/7281765/how-to-embed-an-autoplaying-youtube-video-in-an-iframe
+                    $('#poster_and_video').append("<img id='poster' src='" + d.small_posters + "'><iframe id='video' src='" + d.youtube + "?autoplay=1&mute=1' allow='autoplay'></iframe>")
                     $('#storyPlot').append("<h3>StoryPlot</h3><p>" + d.storyPlot + "</p>")
-                    $('#rating_and_timing').append("<h3>IMDB Rating</h3><p><img title='star-full' class='icon-star-full' src='https://img.icons8.com/fluency/344/star.png'></img>" + d.imdb + "/10</p><h3>Runtime</h3><p>" + d.runtime + " mins</p>")
+                    $('#rating_and_timing').append("<h3>LaBamBa Rating</h3><p><img title='star-full' class='icon-star-full' src='https://img.icons8.com/fluency/344/star.png'></img>" + d.imdb + "<br>(" + d.votes + " votes)</p><h3>Runtime</h3><p>" + d.runtime + " mins</p>")
                     $('#metascore').append("<h3>Metascore</h3><p>" + d.metascore + "</p>")
-                    $('#metascore').append("<h3>Reviews</h3>")
+                    $('#metascore').append("<h3>Reviews</h3><a href='movieDetail_Review.html'><button class='button rounded-corners'>Click Here for Full Review!</button></a>")
+                    $('#director').append("<h3>Director</h3><p>" + d.director + "</p>")
+                    $('#actor1').find('.actorPics').append("<img src='" + d.actor1_pic + "'></img>")
+                    $('#actor1').find('.actorNames').append("<h3><b>" + d.actor1 + "</b></h3>")
+                    $('#actor1').find('.actorAs').append("<p>" + d.actor1_as + "</p>")
+                    $('#actor2').find('.actorPics').append("<img src='" + d.actor2_pic + "'></img>")
+                    $('#actor2').find('.actorNames').append("<h3><b>" + d.actor2 + "</b></h3>")
+                    $('#actor2').find('.actorAs').append("<p>" + d.actor2_as + "</p>")
+                    $('#actor3').find('.actorPics').append("<img src='" + d.actor3_pic + "'></img>")
+                    $('#actor3').find('.actorNames').append("<h3><b>" + d.actor3 + "</b></h3>")
+                    $('#actor3').find('.actorAs').append("<p>" + d.actor3_as + "</p>")
+                    $('#actor4').find('.actorPics').append("<img src='" + d.actor4_pic + "'></img>")
+                    $('#actor4').find('.actorNames').append("<h3><b>" + d.actor4 + "</b></h3>")
+                    $('#actor4').find('.actorAs').append("<p>" + d.actor4_as + "</p>")
                 })
-
-
-
         }
     </script>
 
@@ -49,30 +60,64 @@
         <div id="rating_and_timing"></div>
         <div id="metascore"></div>
         <div id="reviews"></div>
+        <!-- Only included first director -->
         <div id="director"></div>
-        <div id="actors"></div>
-        <div id="photos"></div>
+        <!-- Only included 4 main actors -->
+        <div id="actors">
+            <h3>Actors</h3>
+            <div id="actor1" class="col-1-4">
+                <div class="actorPics circle"></div>
+                <div class="actorNames"></div>
+                <div class="actorAs"></div>
+            </div>
+            <div id="actor2" class="col-1-4">
+                <div class="actorPics circle"></div>
+                <div class="actorNames"></div>
+                <div class="actorAs"></div>
+            </div>
+            <div id="actor3" class="col-1-4">
+                <div class="actorPics circle"></div>
+                <div class="actorNames"></div>
+                <div class="actorAs"></div>
+            </div>
+            <div id="actor4" class="col-1-4">
+                <div class="actorPics circle"></div>
+                <div class="actorNames"></div>
+                <div class="actorAs"></div>
+            </div>
         </div>
+
     </section>
 
     <section class="recommendations">
         <aside class="recommend">
             <h1 class="h1Aside">Recommendations</h1>
-            <img src="https://m.media-amazon.com/images/M/MV5BMmIwZDMyYWUtNTU0ZS00ODJhLTg2ZmEtMTk5ZmYzODcxODYxXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UY209_CR0,0,140,209_AL_.jpg"
-                alt="">
-            <p>Top Gun: Maverick</p>
-            <img src="https://m.media-amazon.com/images/M/MV5BNWM0ZGJlMzMtZmYwMi00NzI3LTgzMzMtNjMzNjliNDRmZmFlXkEyXkFqcGdeQXVyMTM1MTE1NDMx._V1_UY209_CR0,0,140,209_AL_.jpg"
-                alt="">
-            <p>Doctor Strange in the Multiverse of Madness</p>
-            <img src="https://m.media-amazon.com/images/M/MV5BMDdmMTBiNTYtMDIzNi00NGVlLWIzMDYtZTk3MTQ3NGQxZGEwXkEyXkFqcGdeQXVyMzMwOTU5MDk@._V1_UY209_CR0,0,140,209_AL_.jpg"
-                alt="">
-            <p>The Batman</p>
-            <img src="https://m.media-amazon.com/images/M/MV5BYjdhYTE3NjMtZjI3OC00NzVlLWFiNTUtNzQ3NDNiNTI3NDg4XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UY209_CR0,0,140,209_AL_.jpg"
-                alt="">
-            <p>Hustle</p>
-            <img src="https://m.media-amazon.com/images/M/MV5BOGI5N2FhNzktZjZlNi00MmRjLWE1MmUtNjRlNzQyOGMzYjNhXkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_UY209_CR0,0,140,209_AL_.jpg"
-                alt="">
-            <p>Memory</p>
+            <a href="https://www.youtube.com/embed/giXco2jaZ_4">
+                <img src="https://m.media-amazon.com/images/M/MV5BMmIwZDMyYWUtNTU0ZS00ODJhLTg2ZmEtMTk5ZmYzODcxODYxXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UY209_CR0,0,140,209_AL_.jpg"
+                    alt="">
+                <p>Top Gun: Maverick</p>
+            </a>
+
+            <a href="https://www.youtube.com/embed/aWzlQ2N6qqg">
+                <img src="https://m.media-amazon.com/images/M/MV5BNWM0ZGJlMzMtZmYwMi00NzI3LTgzMzMtNjMzNjliNDRmZmFlXkEyXkFqcGdeQXVyMTM1MTE1NDMx._V1_UY209_CR0,0,140,209_AL_.jpg"
+                    alt="">
+                <p>Doctor Strange in the Multiverse of Madness</p>
+            </a>
+            <a href="https://www.youtube.com/embed/mqqft2x_Aa4">
+                <img src="https://m.media-amazon.com/images/M/MV5BMDdmMTBiNTYtMDIzNi00NGVlLWIzMDYtZTk3MTQ3NGQxZGEwXkEyXkFqcGdeQXVyMzMwOTU5MDk@._V1_UY209_CR0,0,140,209_AL_.jpg"
+                    alt="">
+                <p>The Batman</p>
+            </a>
+            <a href="https://www.youtube.com/embed/nM4iy0reaCA">
+                <img src="https://m.media-amazon.com/images/M/MV5BYjdhYTE3NjMtZjI3OC00NzVlLWFiNTUtNzQ3NDNiNTI3NDg4XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UY209_CR0,0,140,209_AL_.jpg"
+                    alt="">
+                <p>Hustle</p>
+            </a>
+            <a href="https://www.youtube.com/embed/ye63hQLDj4k">
+                <img src="https://m.media-amazon.com/images/M/MV5BOGI5N2FhNzktZjZlNi00MmRjLWE1MmUtNjRlNzQyOGMzYjNhXkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_UY209_CR0,0,140,209_AL_.jpg"
+                    alt="">
+                <p>Memory</p>
+            </a>
         </aside>
     </section>
 

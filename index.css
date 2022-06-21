@@ -79,10 +79,20 @@ a{
   margin-bottom: 0;
 }
 
-.footer {
+
+
+/* Stretching the footer to both ends of the web browser */
+div.footer{
+	position:absolute;
+	text-align: center;
+	left: 0;
+  	right: 0;
+	clear: both;
   background: #404042;
-  color: white;
-  padding: 10px 0px;
+}
+/* Footer font white */
+div.footer p{
+	color: white;
 }
 
 .cards {
@@ -118,3 +128,31 @@ a{
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+  /* styling for hyperlinks */
+  a {
+    /* color: white; */
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8%;
+  }
+  /* a:visited {
+    color: grey;
+  } */
+  a:hover {
+    background-color: rgba(151,151,151,0.5);
+    /* color: white; */
+    cursor: pointer;
+  }
+  a:focus {
+    outline: thin dotted;
+  }
+  a:hover, a:active {
+    outline: 0;
+    cursor: pointer;
+  }
+  /* This is for the white-cards, as the background is white, the font cannot be seen */
+  .card-white:hover, .card-white:active {
+    color: rgb(26, 19, 19);
+    cursor: pointer;
+  }

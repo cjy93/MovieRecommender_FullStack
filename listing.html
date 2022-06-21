@@ -64,13 +64,13 @@
                 //this == the link that was clicked
                 if ($(this).attr("id") === "poster") {
                     var id = $(this).attr('alt')
-                    alert(id)
+                    // alert(id)
                 } else if ($(this).attr("id") === "name") {
                     var id = $(this).attr('alt')
                 }
                 var href = $(this).attr("href"); // link to where you want to head to
                 // var text = $(this).text() // movie name
-                alert("You're trying to go to " + id);
+                // alert("You're trying to go to " + id);
                 // add localStorage so I know which link to go to
                 localStorage['id'] = id;
                 location.href('movieDetail.html')
