@@ -10,43 +10,39 @@
     <link href="https://fonts.googleapis.com/css?family=Chivo:700|Overpass:400,700&display=swap" rel="stylesheet">
     <script src="index.js"></script>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="contacts.css">
     <script>
         // cnanot access higher level due to security concenrs
 
         window.onload = function () {
-            // in javascript no higher level access
-            // passing the var to d3 object may not have any outputs
-            // d3 object is not a dom object
-            d3.csv("/data/top250.csv")
-                .row(function (d) {
-                    title = d.Title
-                    runtime = parseInt(d.Runtime)
-                    $("#table_messages").append(
-                        "<tr><td>" + title + "</td><td>" + runtime + "</td></tr>"
-                    )
-                    // return {
-                    //     title: d.Title,
-                    //     runtime: parseInt(d.Runtime)
-                    // // appending jquery
 
-                    //     )
-                    // }
-                })
-                .get(function (data) {
-                    console.log(data);
-
-                })
         }
     </script>
 </head>
 
 <body>
-    <table id="table_messages">
-        <tr>
-            <td>user</td>
-            <td>message</td>
-        </tr>
-    </table>
+    <h1>Contact Us!</h1>
+    <p>We offer offline support via our email follow-ups! Otherwise, you can send in your query in the form below! :)
+    </p>
+    <!-- Contact details from Labamba -->
+    <div class="contactInfo">
+        <article>
+            <h2>Email Information</h2>
+            <p>Email: <a href="mailto:servicehelp@labamba.com">servicehelp@labamba.com</a></p>
+        </article>
+
+
+    </div>
+    <!-- User to fill up form here -->
+    <section class="contactDetails">
+        <h2>Form</h2>
+        <p>Please leave your query/issues related to the website/booking here and we will get back to you as soon as we
+            can!</p>
+        <!-- form component -->
+
+
+
+    </section>
 
     <!-- contact card -->
     <div class="container">

@@ -1,0 +1,58 @@
+body {
+	margin: 0 auto;
+	width: 40%;
+	max-width: 1300px;
+	min-width: 700px;
+	margin-left: auto;
+	margin-right: auto;/*The margin auto is the centering*/
+}
+
+  
+h1, h2, h3 {
+color: rgb(109, 107, 107);
+font-family: Chivo;
+}
+
+.container {
+width: 900px;
+margin: 60px auto;
+}
+
+p>a {
+    color:rgb(175, 169, 169) ;
+    text-decoration: underline;
+}
+
+
+@media (min-width: 300px) {
+	.container {
+	  width: 400px;
+	}
+	.cards {
+	  grid-template-columns: 1fr;
+	}
+  }
+  
+  @media (min-width: 700px) {
+	.container {
+	  width: 600px;
+	}
+	.cards {
+	  grid-template-columns: 1fr;
+	}
+  }
+  
+  @media (min-width: 1000px) {
+	.container {
+	  width: 900px;
+	}
+	.cards {
+	  grid-template-columns: 1fr;
+	}
+  }
+  
+  /* allow the <p> and <a> tags to be same line */
+  article a{
+    display: inline;
+    white-space: nowrap;
+  }
