@@ -2,7 +2,10 @@
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- Title -->
     <title>LaBamBa: Movie Recommender and Reviews</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/logo.ico">
     <link href="https://fonts.googleapis.com/css?family=Chivo:700|Overpass:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="about.css">
@@ -34,18 +37,22 @@
                     $('#metascore').append("<h3>Metascore</h3><p>" + d.metascore + "</p>")
                     $('#metascore').append("<h3>Reviews</h3><a href='movieDetail_Review.html'><button class='button rounded-corners'>Click Here for Full Review!</button></a>")
                     $('#director').append("<h3>Director</h3><p>" + d.director + "</p>")
-                    $('#actor1').find('.actorPics').append("<img src='" + d.actor1_pic + "'></img>")
+                    $('#actor1').find('.actorPics').append("<a href='" + d.actor1_link + "'><img src='" + d.actor1_pic + "'></img></a>")
                     $('#actor1').find('.actorNames').append("<h3><b>" + d.actor1 + "</b></h3>")
                     $('#actor1').find('.actorAs').append("<p>" + d.actor1_as + "</p>")
-                    $('#actor2').find('.actorPics').append("<img src='" + d.actor2_pic + "'></img>")
+                    $('#actor2').find('.actorPics').append("<a href='" + d.actor2_link + "'><img src='" + d.actor2_pic + "'></img></a>")
                     $('#actor2').find('.actorNames').append("<h3><b>" + d.actor2 + "</b></h3>")
                     $('#actor2').find('.actorAs').append("<p>" + d.actor2_as + "</p>")
-                    $('#actor3').find('.actorPics').append("<img src='" + d.actor3_pic + "'></img>")
+                    $('#actor3').find('.actorPics').append("<a href='" + d.actor3_link + "'><img src='" + d.actor3_pic + "'></img></a>")
                     $('#actor3').find('.actorNames').append("<h3><b>" + d.actor3 + "</b></h3>")
                     $('#actor3').find('.actorAs').append("<p>" + d.actor3_as + "</p>")
-                    $('#actor4').find('.actorPics').append("<img src='" + d.actor4_pic + "'></img>")
+                    $('#actor4').find('.actorPics').append("<a href='" + d.actor4_link + "'><img src='" + d.actor4_pic + "'></img></a>")
                     $('#actor4').find('.actorNames').append("<h3><b>" + d.actor4 + "</b></h3>")
                     $('#actor4').find('.actorAs').append("<p>" + d.actor4_as + "</p>")
+                    $('#gallery').append("<div><img src='" + d.google_image1 + "'></img></div><div><img src='"
+                        + d.google_image2 + "'></img></div><div><img src='" + d.google_image3
+                        + "'></img></div><div><img src='" + d.google_image4 + "'></img></div><div><img src='"
+                        + d.google_image5 + "'</img></div>")
                 })
         }
     </script>
@@ -85,6 +92,10 @@
                 <div class="actorNames"></div>
                 <div class="actorAs"></div>
             </div>
+        </div>
+        <!-- Gallery of many pics from this movie -->
+        <div id="gallery">
+            <h3>Gallery</h3>
         </div>
 
     </section>

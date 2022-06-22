@@ -1,0 +1,26 @@
+/*   
+   Filename: contacts_validate.css
+    This file is only meant to validate the fields in the css
+*/
+
+
+/* Validation Styles */
+input:focus, select:focus, textarea:focus{
+    background-color : rgb(255,255,180);
+ }
+ 
+ /* new pseudo */
+ input#nameBox:focus:valid,
+ input#phoneBox:focus:valid,
+ input#email:focus:valid
+ {
+    background: rgb(220, 255, 220) url(data/form_valid.png) 
+    right/contain no-repeat;
+ }
+ input#nameBox:focus:invalid,
+ input#phoneBox:focus:invalid,
+ input#email:focus:invalid
+ {
+     background: rgb(255, 230, 230) url(data/form_invalid.png)
+     right/contain no-repeat;
+ }

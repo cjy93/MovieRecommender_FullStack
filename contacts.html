@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- Title -->
     <title>LaBamBa: Movie Recommender and Reviews</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/logo.ico">
 
     <link href="https://fonts.googleapis.com/css?family=Chivo:700|Overpass:400,700&display=swap" rel="stylesheet">
     <script src="index.js"></script>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="contacts.css">
+    <link rel="stylesheet" href="contacts_validate.css">
     <script>
         // cnanot access higher level due to security concenrs
 
@@ -29,6 +33,7 @@
         <article>
             <h2>Email Information</h2>
             <p>Email: <a href="mailto:servicehelp@labamba.com">servicehelp@labamba.com</a></p>
+            <p>Phone: <a href="tel:6567721900">6772 1900</a></p>
         </article>
 
 
@@ -37,9 +42,65 @@
     <section class="contactDetails">
         <h2>Form</h2>
         <p>Please leave your query/issues related to the website/booking here and we will get back to you as soon as we
-            can!</p>
+            can! Note that required values are marked by an asterisk (*).</p>
         <!-- form component -->
+        <form action="http://www.example.com/petcare/booking" method="POST">
+            <!-- can use method="GET" since this is a dummy form for now -->
+            <fieldset id="detailsInfo">
+                <!-- Legend for whole fieldset  -->
+                <legend>Fill in the form details</legend>
+                <div>
+                    <label for="title">Title</label>
+                    <input type="text" name="titleBox" id="title" list="titleList">
+                    <datalist id="titleList">
+                        <option value="Mr.">Mr.</option>
+                        <option value="Mrs.">Mrs.</option>
+                        <option value="Ms.">Ms.</option>
+                        <option value="Prof.">Prof.</option>
+                        <option value="Dr.">Dr.</option>
+                        <option value="Assist. Prof.">Assist. Prof.</option>
+                        <option value="Assoc. Prof">Assoc. Prof</option>
+                    </datalist>
+                </div>
+                <div>
+                    <!-- "for" uses the "id" of the input tag -->
+                    <label for="nameBox">Name*</label>
+                    <!-- attribute "name" is used for when you send form data to server -->
+                    <input id="nameBox" name="custName" type="text" required placeholder="first-name last-name">
+                </div>
+                <div>
+                    <label for="phoneBox">Phone*</label>
+                    <input name="custPhone" id="phoneBox" type="text" required placeholder="(nn)nnnn-nnnn"
+                        pattern="\(?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})">
+                </div>
+                <div>
+                    <label for="email">Email*</label>
+                    <input type="email" name="emailBox" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                        required>
+                    </di>
+                    <div>
+                        <input type="radio" name="enquiryType" id="query" checked>
+                        <label for="query">General enquiry</label>
+                        <input type="radio" name="enquiryType" id="order">
+                        <label for="order">Booking enquiry</label>
+                    </div>
+                    <div>
+                        <label for="visitBox">Date</label>
+                        <input type="date" id="visitBox" name="visitDate">
+                    </div>
 
+
+                    <!-- textarea starts off cols and rows as below. -->
+                    <label for="enquiry">Enquiry/Problem*</label>
+                    <br>
+                    <textarea name="fetAddress" id="enquiry" cols="30" rows="10"></textarea>
+                    <div>
+                        <input type="submit" value="Submit form">
+                        <input type="reset" value="Reset">
+                    </div>
+            </fieldset>
+
+        </form>
 
 
     </section>

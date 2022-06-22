@@ -1,3 +1,9 @@
+/* 
+Filename: index.css
+This styling is applied to all sheets! 
+*/
+
+@charset "utf-8";
 body {
   font-family: Overpass;
   color: rgb(175, 169, 169);
@@ -27,13 +33,17 @@ a{
   background-position: center;
   padding: 150px 0;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
 .banner h1 {
   color: white;
   font-size: 45px;
-  margin: 0;
+  margin: 0;  
+  position: relative;
+  font-size: 4em;
 }
 
 .banner p {
@@ -155,4 +165,12 @@ div.footer p{
   .card-white:hover, .card-white:active {
     color: rgb(26, 19, 19);
     cursor: pointer;
+  }
+
+  /* logo styling */
+  #logo {
+    display: block;
+    height: 90px;
+    border: 1px solid white;
+
   }

@@ -33,7 +33,7 @@ aside{
 }
 
 
-
+/* Star rating symbol styling */
 img.icon-star-full {
 	width: 20px;
 	height: 20px;	
@@ -44,6 +44,7 @@ img.icon-star-half {
 	height: 20px;
 }
 
+/* poster and video styling */
 div#poster_and_video{
 	justify-content: center;
 	margin-left: 0%;
@@ -69,6 +70,18 @@ div.footer{
 	left: 0;
   	right: 0;
 	clear: both;
+}
+
+/* Gallery styling */
+#gallery>div {
+	height:190px;
+	padding: 2%;
+	float: left;
+}
+#gallery>div>img{
+	border: 1px solid white;
+	height: 180px;
+	width: auto;
 }
 /* Footer font white */
 div.footer p{
@@ -100,7 +113,7 @@ div[class^="col-"]{/*All div with class starts with "col-"*/
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
  }
- .circle {
+ .circle img{
     width: relative;
     height: relative;
     position: relative;
