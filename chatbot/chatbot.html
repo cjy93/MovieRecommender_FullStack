@@ -1,0 +1,88 @@
+<!-- 
+    How to operate my chatbot?
+1) conda activate chatbot3
+2) Go to the folder where your rasabot reside
+3) Run custom actions on first terminal `python -m rasa run actions` by https://learning.rasa.com/archive/rasa-forms-2/custom-actions/
+3) Serve on server on second terminal `rasa run -m models --enable-api --cors "*"`
+4) Open chatbot.html file on Chrome
+ -->
+
+<!-- Rasa Webchat tutorial from: https://github.com/botfront/rasa-webchat -->
+<!-- 
+    Tutorial in videos: 
+    https://youtu.be/eJMT2FovZsM 
+    https://www.youtube.com/watch?v=n4XTy8M7zlU
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Title -->
+    <title>LaBamBa: Movie Recommender and Reviews</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../images/logo.ico">
+
+    <link rel="stylesheet" href="chatbot.css">
+    <!-- For the widget -->
+    <!-- <link rel="stylesheet"
+        href="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.css" /> -->
+</head>
+
+<body>
+    <style>
+        .rw-conversation-container .rw-header {
+            background-color: black;
+            border: 1px solid white;
+        }
+
+        .rw-conversation-container .rw-messages-container .rw-message .rw-client {
+            background-color: black;
+            border: 1px solid white;
+        }
+
+        .rw-launcher {
+            background-color: black;
+            border: 1px solid white;
+        }
+
+        .rw-reply {
+            background-color: black;
+        }
+    </style>
+    <script>!(function () {
+            let e = document.createElement("script"),
+                t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+                "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
+                // Replace 1.x.x with the version that you want
+                (e.async = !0),
+                (e.onload = () => {
+                    window.WebChat.default(
+                        {
+                            initPayload: '/greet',
+                            customData: { language: "en" },
+                            socketUrl: "http://localhost:5005",
+                            title: 'LaBamBa Bot',
+                            subtitle: 'Movie Recommender Bot',
+                            embedded: true,
+                            profileAvatar: '../images/logo.png',
+                            fullScreenMode: true,
+                            showMessageDate: true,
+
+
+                            // add other props here
+                        },
+                        null
+                    );
+                }),
+                t.insertBefore(e, t.firstChild);
+        })();
+        // Clear chat when refresh window
+        localStorage.clear();
+    </script>
+
+
+
+
+</body>

@@ -1,3 +1,10 @@
+<!-- 
+Filename: contacts.html
+This file allows user to find contact information about LaBamBa.
+If users have further queries or feedback, they can fill in the form below.
+This form will send the outputs to a Google sheet tagged to my personal email. If you try my app, you can check the output at this sheet : https://docs.google.com/spreadsheets/d/1Sj06m3z4Z06dGNjL7VlEnlXbIlCKOWTjZqtOF2Rx7HA/edit?usp=sharing
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,6 +32,24 @@
 </head>
 
 <body>
+    <style>
+        /* When the submission is successful, change the message to green */
+        .green {
+            color: green;
+            background-color: rgba(0, 128, 0, 0.3);
+            padding: 20px;
+            text-align: center;
+
+        }
+
+        .red {
+            color: red;
+            background-color: rgba(255, 0, 0, 0.3);
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+
     <h1>Contact Us!</h1>
     <p>We offer offline support via our email follow-ups! Otherwise, you can send in your query in the form below! :)
     </p>
@@ -44,7 +69,10 @@
         <p>Please leave your query/issues related to the website/booking here and we will get back to you as soon as we
             can! Note that required values are marked by an asterisk (*).</p>
         <!-- form component -->
-        <form action="http://www.example.com/petcare/booking" method="POST">
+        <!-- Success/Failure Message here -->
+        <h4 id="form-alert"></h4>
+        <!-- Form boxes -->
+        <form name="google-sheet" method="POST">
             <!-- can use method="GET" since this is a dummy form for now -->
             <fieldset id="detailsInfo">
                 <!-- Legend for whole fieldset  -->
@@ -77,31 +105,43 @@
                     <label for="email">Email*</label>
                     <input type="email" name="emailBox" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                         required>
-                    </di>
-                    <div>
-                        <input type="radio" name="enquiryType" id="query" checked>
-                        <label for="query">General enquiry</label>
-                        <input type="radio" name="enquiryType" id="order">
-                        <label for="order">Booking enquiry</label>
-                    </div>
-                    <div>
-                        <label for="visitBox">Date</label>
-                        <input type="date" id="visitBox" name="visitDate">
-                    </div>
+                </div>
+                <div>
+                    <label for="enquiryType">Enquiry type</label>
+                    <select name="enquirySelection" id="enquiryType">
+                        <option value="General Enquiry">General Enquiry</option>
+                        <option value="Promotions enquiry">Promotions Enquiry</option>
+                        <option value="Others" selected>Others</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="visitBox">Date</label>
+                    <input type="date" id="visitBox" name="visitDate">
+                </div>
 
 
-                    <!-- textarea starts off cols and rows as below. -->
-                    <label for="enquiry">Enquiry/Problem*</label>
-                    <br>
-                    <textarea name="fetAddress" id="enquiry" cols="30" rows="10"></textarea>
-                    <div>
-                        <input type="submit" value="Submit form">
-                        <input type="reset" value="Reset">
-                    </div>
+                <!-- textarea starts off cols and rows as below. -->
+                <label for="enquiry">Enquiry/Problem*</label>
+                <br>
+                <textarea name="enquiryBox" id="enquiry" cols="30" rows="10"></textarea>
+                <div>
+                    <input type="submit" value="Submit form">
+                    <input type="reset" value="Reset">
+                </div>
             </fieldset>
 
         </form>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxZBfBpvEOvzK_TMrB54QGzdS4btmwwnEd_m3a0U1lKJgnQd7_Vx6fMmA_2_3-7b86u2Q/exec'
+            const form = document.forms['google-sheet']
 
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => $('#form-alert').html("You have successfully submitted the form!").attr('class', 'green'))
+                    .catch(error => $('#form-alert').html("You have made some mistakes in the form").attr('class', 'red'))
+            })
+        </script>
 
     </section>
 
@@ -139,5 +179,4 @@
 </html>
 
 
-<!-- https://codepen.io/tyler-chipman/pen/qBPoGKE did not work -->
-<!-- https://appcode.app/how-to-create-an-html-carousel/ -->
+<!-- How to submit html form to Google spreadsheet: https://www.youtube.com/watch?v=s9XZui6zRPw -->
