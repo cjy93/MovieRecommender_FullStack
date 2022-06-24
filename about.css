@@ -90,3 +90,9 @@ html{
 .is-hidden{
     display: none;
 }
+
+section.aboutUs{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}

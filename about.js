@@ -1,3 +1,20 @@
+// Filename: about.js
+
+// This section is for "cathayPromotions.html"
+function modifyText1() {
+    var posterImage = document.getElementById("promotion1")
+    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.cathaycineplexes.com.sg/images/3Carousel-LR.jpg"><img id="promoPosterImg" src="https://www.cathaycineplexes.com.sg/images/3Carousel-LR.jpg" alt=""></a>'
+}
+function modifyText2() {
+    var posterImage = document.getElementById("promotion1")
+    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.cathaycineplexes.com.sg/images/2Carousel-LR.jpg"><img id="promoPosterImg" src="https://www.cathaycineplexes.com.sg/images/2Carousel-LR.jpg" alt=""></a>'
+}
+function modifyText3() {
+    var posterImage = document.getElementById("promotion1")
+    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.cathaycineplexes.com.sg/images/15Sample%20(1200x580).jpg"><img id="promoPosterImg" src="https://www.cathaycineplexes.com.sg/images/15Sample%20(1200x580).jpg" alt=""></a>'
+}
+
+
 window.onload = function () {
     // Carousel
 
@@ -111,7 +128,10 @@ window.onload = function () {
 
     })
 
+    // For "cathaypromotions.html" Add event listener to poster
+    document.getElementById('button1m').addEventListener("click", modifyText1);
+    document.getElementById('button2m').addEventListener("click", modifyText2);
+    document.getElementById('button3m').addEventListener("click", modifyText3);
 
-
-    // tutorial: https://www.youtube.com/watch?v=gBzsE0oieio
 }
+// Tutorial On how To Make Carousell From JS : https://www.youtube.com/watch?v=gBzsE0oieio

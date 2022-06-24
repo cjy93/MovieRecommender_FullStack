@@ -3,21 +3,56 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>LaBamBa: Movie Recommender and Reviews</title>
-
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/logo.ico">
     <link href="https://fonts.googleapis.com/css?family=Chivo:700|Overpass:400,700&display=swap" rel="stylesheet">
     <!-- Social Media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="about.js"></script>
+
+
+
+    <!-- styling -->
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="about.css">
-    <script>
-       // var d = moveToSlide(..)
-    </script>
+    <link rel="stylesheet" href="promotions.css">
+
 </head>
 
 <body>
+    <img id="logo" src="images/logo.png" alt="">
+    <!-- Direct to booking website -->
+    <h1 class="heading">Book Your Tickets at Shaw now!</h1>
+    <p id="booking">Click the button below to go to Shaw Theatres's Official Website!</p>
+    <a id="bookingLink" href="https://www.shaw.sg/"><button id="goToWebsite">Click here to go to
+            Shaw!</button></a>
+
+    <!-- latest promotions -->
+    <h1 class="heading">Promotions at Shaw!</h1>
+    <div class="promotions">
+        <div class="col-1-1" id="promotion1">
+            <a id="promoPosterLink" href="https://www.cathaycineplexes.com.sg/images/3Carousel-LR.jpg"><img
+                    id="promoPosterImg" src="https://www.cathaycineplexes.com.sg/images/3Carousel-LR.jpg" alt=""></a>
+        </div>
+        <div class="buttonss">
+            <button class="buttonsm" id="button1m" value="button1">1</button>
+            <button class="buttonsm" id="button2m" value="button2">2</button>
+            <button class="buttonsm" id="button3m" value="button3">3</button>
+        </div>
+
+
+    </div>
+
+
+
+    <!-- latest movies -->
+    <script src="about.js">
+
+    </script>
+    <h1 class="heading">Latest Movies at Cathay!</h1>
     <!-- Carousel section -->
     <div class="carousel">
         <!-- left button -->
@@ -27,16 +62,33 @@
             <ul class="carousel__track">
                 <li class="carousel__slide current-slide">
                     <img class="carousel__image"
-                        src="https://filipinotimes.net/wp-content/uploads/2022/04/uncharted-movie.jpg" alt="">
+                        src="https://cdn.onebauer.media/one/media/62a0/e223/ac3d/8497/f303/debc/jurassic-1.jpg?format=jpg&quality=80&width=1800&ratio=16-9&resize=aspectfill"
+                        alt="">
+                    <div>
+                        <h3>Jurassic World Dominion</h3>
+                        <p>Only in Cinemas June 8</p>
+                    </div>
+
                 </li>
                 <li class="carousel__slide">
                     <img class="carousel__image"
                         src="https://blogger.googleusercontent.com/img/a/AVvXsEjWL7XWF6fULKh3J9gLE7-d2u7vjWyjjesNFhWzlxSIC0eOfLqDXYCyKfmee9k5UCrRH-BHktCxTAjj8jp2FeYkeLaqG0CrUYJ2Ih_8Rs-jwcagNGSvCG-Q1FYyVH4K8kN0l-zl-YN79eFSaHstuAhnPQVb62JRVKAKdWJM1OzgBYkthK10UD8nn5mdZw=w640-h360"
                         alt="">
+                    <div>
+                        <h3>Dr Strange 2: Multiverse of Madness</h3>
+                        <p>Only in Cinemas May 4</p>
+                    </div>
+
                 </li>
                 <li class="carousel__slide">
                     <img class="carousel__image"
-                        src="https://is5-ssl.mzstatic.com/image/thumb/UIhkVEhmstoRBzWeW4EZqg/1200x675mf.jpg" alt="">
+                        src="https://i.ytimg.com/vi/giXco2jaZ_4/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAuXsEFoH9zHPuCThADlCOPtTmzIg"
+                        alt="">
+                    <div>
+                        <h3>Top Gun Maverick</h3>
+                        <p>Only in Cinemas May 25</p>
+                    </div>
+
                 </li>
             </ul>
         </div>
@@ -51,52 +103,9 @@
             <button class="carousel__indicator"></button>
         </div>
     </div>
+    <br><br><br>
 
-    <!-- About Us -->
-    <section class="aboutUs">
-        <h1>About LaBamBa</h1>
-        <p>&copyLaBamBa was established in the year 2020 to assist movie goers on what movies they should be keeping a
-            lookout
-            for, be it upcoming movies, or all time favourites! This website contains movie listings, details, reviews
-            and even available promotions from our partners(Cinemas).</p>
-
-        <div class="container">
-            <h2>Latest Promotions!</h2>
-            <!-- Cards container -->
-            <div class="cards">
-
-                <!-- Cathay promotions -->
-                <a href="cathaypromotions.html">
-                    <div class="card-white">
-                        <img src="https://play-lh.googleusercontent.com/ZarOi4vSKCLHxigagkcudNxFUdm-AGCKaupz4Q-J-EOL8Bg46vNK-9J9wWra6fzOtg"
-                            alt="">
-                        <h3>Cathay Cineplexes Promotions!</h3>
-                        <p>Click here to find out more!</p>
-                    </div>
-                </a>
-                <!-- Golden Village promotions -->
-                <a href="goldenVpromotions.html">
-                    <div class="card-white">
-                        <img src="https://static.mycareersfuture.gov.sg/images/company/logos/9ef91fe3425d3f0b31b7664f98ffe84c/golden-village-multiplex.jpg"
-                            alt="">
-                        <h3>Golden Village Promotions!</h3>
-                        <p>Click here to find out more!</p>
-                    </div>
-                </a>
-                <!-- Shaw promotions -->
-                <a href="shawpromotions.html">
-                    <div class="card-white">
-                        <img src="https://play-lh.googleusercontent.com/ZimgCESsLd1wzGpi17hVeHhcTHWbkr5o0YJ-kYUMcZUhZ2nB1LIpwW3FOs5kIfw18Q"
-                            alt="">
-                        <h3>Shaw Theatres Promotions!</h3>
-                        <p>Click here to find out more!</p>
-                    </div>
-                </a>
-            </div>
-    </section>
-    <!-- Promotion -->
-
-    <!-- Navigation -->
+    <!-- contact card -->
     <div class="container">
         <h2>Explore more here</h2>
         <!-- Cards container -->
@@ -111,8 +120,21 @@
                     <p>Go to home page or find Promotions!</p>
                 </div>
             </a>
+            <!-- Promotion list -->
+            <a href="about.html">
+                <div class="card-white">
+                    <img src="https://media.istockphoto.com/photos/letterpress-type-about-us-picture-id652180044?b=1&k=20&m=652180044&s=170667a&w=0&h=YHPxcUwGEVQWt4TV6uxMDcHkcBlhQ2I6tZ4-8J0DzTE="
+                        alt="">
+                    <h3>Back to Promotion list and About Us!</h3>
+                    <p>Go to previous page!</p>
+                </div>
+            </a>
+
+
+
         </div>
     </div>
+
 
     <!-- Footer section -->
     <div class="footer">
@@ -125,12 +147,6 @@
             </div>
         </div>
     </div>
-
-    <script> </script>
 </body>
 
 </html>
-
-
-<!-- https://codepen.io/tyler-chipman/pen/qBPoGKE did not work -->
-<!-- https://appcode.app/how-to-create-an-html-carousel/ -->

@@ -1,6 +1,19 @@
+<!-- FileName: Chatbot.html
+Here are the steps to set up your computer to run my Rasa chatbot:
+From Terminal:
+```
+conda create --name chatbot3 python==3.8
+conda activate chatbot3
+pip install rasa --use-deprecated=legacy-resolver
+pip install sanic==21.9.3
+rasa --version
+```
+-->
+
 <!-- 
-    How to operate my chatbot?
-1) conda activate chatbot3
+How to operate my chatbot?
+First, access the folder of your command prompt to where this file resides.
+1) `conda activate chatbot3` where "chatbot3" is my conda environment with Rasa and NPM installed
 2) Go to the folder where your rasabot reside
 3) Run custom actions on first terminal `python -m rasa run actions` by https://learning.rasa.com/archive/rasa-forms-2/custom-actions/
 3) Serve on server on second terminal `rasa run -m models --enable-api --cors "*"`
@@ -41,6 +54,11 @@
             border: 1px solid white;
         }
 
+        .rw-conversation-container .rw-messages-container .rw-message .rw-reply {
+            background-color: black;
+            border: 1px solid white;
+        }
+
         .rw-launcher {
             background-color: black;
             border: 1px solid white;
@@ -65,10 +83,10 @@
                             socketUrl: "http://localhost:5005",
                             title: 'LaBamBa Bot',
                             subtitle: 'Movie Recommender Bot',
-                            embedded: true,
                             profileAvatar: '../images/logo.png',
                             fullScreenMode: true,
                             showMessageDate: true,
+                            embedded: true,
 
 
                             // add other props here

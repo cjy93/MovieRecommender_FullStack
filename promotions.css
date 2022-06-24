@@ -1,0 +1,136 @@
+/* h1 styling */
+h1{
+    clear:both;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* body style */
+body{
+    width: 90%;
+    margin: auto;
+}
+
+/* Adding text box within image */
+
+li.carousel__slide>div{
+    position: absolute;
+    bottom: 20px;
+    left: 500px;
+    background-color: rgba(0,0,0,0.4);
+    padding: 20px;
+}
+
+li.carousel__slide>div>h3{
+    color: white;
+}
+
+li.carousel__slide>div>p{
+    color: rgba(255, 255, 255, 0.671);
+}
+
+/* Promotion styling */
+div.col-1-1{
+    position: relative;
+    margin: auto;
+}
+
+div.col-1-1>a>img, div.col-1-3>a>img{
+    object-fit: contain;
+    display:block;
+    max-width: 100%;
+    max-height: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* remove the grey background when hover(from index.css) */
+a#promoPosterLink:hover, #bookingLink:hover{
+    background-color: black;
+}
+/* add white border when hover over promo images */
+#promoPosterImg:hover, button#goToWebsite:hover{
+    border:4px solid white;
+}
+/* promotions image buttons styling */
+div.buttonss{
+    margin: auto;
+    margin-top: 0;
+    position: relative;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttonsm{
+    margin-top: 0px;
+    padding: 20px;
+    display: inline;
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* carousell styling */
+div.carousel{
+    clear: both;
+}
+
+/* make hyperlink box smaller */
+a#promoPosterLink{
+    padding: 0px;
+    height: 400px;
+}
+
+/* center the paragraph */
+p#booking{
+    text-align: center;
+}
+/* center logo */
+img#logo{
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Go to Booking website Button */
+#goToWebsite{
+    margin: auto;
+    margin-top: 0;
+    position: relative;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Reduce size between Go to website button and next section */
+a#bookingLink{
+    margin-bottom: 0px;
+}
+/* Add effects to button when hover */
+#goToWebsite:hover, .buttonsm:hover{
+    background-color: rgb(252, 247, 247);
+	font-weight: 600;
+	cursor: pointer;
+}
+#goToWebsite:active, .buttonsm:active{
+    background-color: rgba(252, 247, 247, 0.5);
+	font-weight: 600;
+	cursor: pointer;
+}
+
+/* Contact card */
+@media (min-width: 1000px) {
+    .container {
+      width: 900px;
+    }
+    .cards {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
