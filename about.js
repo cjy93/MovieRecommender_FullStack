@@ -1,53 +1,55 @@
 // Filename: about.js
+// All posters are hyperlinked to the original website, and hence they are the real source.
+// Wherever the images are local, the hyperlinks are in the "alt" argument. This is because Cathay, GV and Shaw update their website quite often, so I download to play safe in case it cause my app to not show the images.
 
-// This section is for "cathayPromotions.html"
+//* This section is for "cathayPromotions.html". Change promotional picture by clicking "1","2" or "3"rd  picture.
 function modifyText1() {
     var posterImage = document.getElementById("promotion1")
-    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.cathaycineplexes.com.sg/promotion-detail.aspx?id=2987"><img id="promoPosterImg" src="https://www.cathaycineplexes.com.sg/images/3Carousel-LR.jpg" alt=""></a>'
+    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.cathaycineplexes.com.sg/promotion-detail.aspx?id=2987"><img id="promoPosterImg" src="images/1.jpg" alt="https://www.cathaycineplexes.com.sg/images/3Carousel-LR.jpg"></a>'
 }
 function modifyText2() {
     var posterImage = document.getElementById("promotion1")
-    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.cathaycineplexes.com.sg/promotion-detail.aspx?id=2959"><img id="promoPosterImg" src="https://www.cathaycineplexes.com.sg/images/2Carousel-LR.jpg" alt=""></a>'
+    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.cathaycineplexes.com.sg/promotion-detail.aspx?id=2959"><img id="promoPosterImg" src="images/2.jpg" alt="https://www.cathaycineplexes.com.sg/images/2Carousel-LR.jpg"></a>'
 }
 function modifyText3() {
     var posterImage = document.getElementById("promotion1")
-    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.cathaycineplexes.com.sg/movie-detail.aspx?id=HO00001333&utm_source=social&utm_medium=instagram_skedlink&utm_campaign=Minions2TheRiseOfGru&utm_term=EngSub"><img id="promoPosterImg" src="https://www.cathaycineplexes.com.sg/images/15Sample%20(1200x580).jpg" alt=""></a>'
+    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.cathaycineplexes.com.sg/movie-detail.aspx?id=HO00001333&utm_source=social&utm_medium=instagram_skedlink&utm_campaign=Minions2TheRiseOfGru&utm_term=EngSub"><img id="promoPosterImg" src="images/3.jpg" alt="https://www.cathaycineplexes.com.sg/images/15Sample%20(1200x580).jpg"></a>'
 }
 
-// this section is for 'shawpromotions.html'
+//* this section is for 'shawpromotions.html'. Change promotional picture by clicking "1","2" or "3"rd  picture.
 function modifyText4() {
     var posterImage = document.getElementById("promotion1")
-    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.shaw.sg/promo-details/facebook--elvis-movie-premium-pack/CA-IG-ELVIS"><img id="promoPosterImg" src="https://shawsgqk.gumlet.io/fetch/https://shawsgcdn.azureedge.net/prd/content/images/promotions/default/en-sg/2022-06-23-FB-Poster-Elvis.jpg?w=360&dpr=1.0" alt=""></a>'
+    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.shaw.sg/promo-details/facebook--elvis-movie-premium-pack/CA-IG-ELVIS"><img id="promoPosterImg" src="images/4.jpg" alt="https://shawsgqk.gumlet.io/fetch/https://shawsgcdn.azureedge.net/prd/content/images/promotions/default/en-sg/2022-06-23-FB-Poster-Elvis.jpg?w=360&dpr=1.0"></a>'
 }
 function modifyText5() {
     var posterImage = document.getElementById("promotion1")
-    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.shaw.sg/promo-details/instagram--minions-2--the-rise-of-gru/CA-IG-MINI2"><img id="promoPosterImg" src="https://shawsgqk.gumlet.io/fetch/https://shawsgcdn.azureedge.net/prd/content/images/promotions/default/en-sg/Popcorn-set-(Shaw).jpg?w=360&dpr=1.0" alt=""></a>'
+    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.shaw.sg/promo-details/instagram--minions-2--the-rise-of-gru/CA-IG-MINI2"><img id="promoPosterImg" src="images/5.jpg" alt="https://shawsgqk.gumlet.io/fetch/https://shawsgcdn.azureedge.net/prd/content/images/promotions/default/en-sg/Popcorn-set-(Shaw).jpg?w=360&dpr=1.0"></a>'
 }
 function modifyText6() {
     var posterImage = document.getElementById("promotion1")
-    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.shaw.sg/promo-details/combo-of-the-month--marvel-studios-doctor-strange-in-the-multiverse-of-madness-/CA-SH-ComboS"><img id="promoPosterImg" src="https://shawsgqk.gumlet.io/fetch/https://shawsgcdn.azureedge.net/prd/content/images/promotions/default/en-sg/MicrosoftTeams-image%20(1).png?w=360&dpr=1.0" alt=""></a>'
+    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.shaw.sg/promo-details/combo-of-the-month--marvel-studios-doctor-strange-in-the-multiverse-of-madness-/CA-SH-ComboS"><img id="promoPosterImg" src="images/6.jpg" alt="https://shawsgqk.gumlet.io/fetch/https://shawsgcdn.azureedge.net/prd/content/images/promotions/default/en-sg/MicrosoftTeams-image%20(1).png?w=360&dpr=1.0"></a>'
 }
 
 
-// this section is for 'goldenVpromotions.html'
+//* this section is for 'goldenVpromotions.html'. Change promotional picture by clicking "1","2" or "3"rd  picture.
 function modifyText7() {
     var posterImage = document.getElementById("promotion1")
-    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.gv.com.sg/GVPromotionDetails#/promotion/6f352109-ff2c-4d6e-a85b-5311251dc0ad"><img id="promoPosterImg" src="https://media.gv.com.sg/imagesresize/promo_toystudio_2locations.jpg" alt=""></a>'
+    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.gv.com.sg/GVPromotionDetails#/promotion/6f352109-ff2c-4d6e-a85b-5311251dc0ad"><img id="promoPosterImg" src="images/7.webp" alt="https://media.gv.com.sg/imagesresize/promo_toystudio_2locations.jpg"></a>'
 
 }
 function modifyText8() {
     var posterImage = document.getElementById("promotion1")
-    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.gv.com.sg/GVPromotionDetails#/promotion/ca933eb0-4667-451a-88f9-7ce575c52302"><img id="promoPosterImg" src="https://media.gv.com.sg/imagesresize/promo_gcprecautionary_Apr22.jpg" alt=""></a>'
+    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.gv.com.sg/GVPromotionDetails#/promotion/ca933eb0-4667-451a-88f9-7ce575c52302"><img id="promoPosterImg" src="images/8.webp" alt="https://media.gv.com.sg/imagesresize/promo_gcprecautionary_Apr22.jpg"></a>'
 }
 function modifyText9() {
     var posterImage = document.getElementById("promotion1")
-    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.gv.com.sg/GVPromotionDetails#/promotion/dfb38c1c-3349-4f44-b763-ddfa93c67ed2"><img id="promoPosterImg" src="https://www.gv.com.sg/media/imagesresize/promo_gvmcogawa30.jpg" alt=""></a>'
+    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.gv.com.sg/GVPromotionDetails#/promotion/dfb38c1c-3349-4f44-b763-ddfa93c67ed2"><img id="promoPosterImg" src="images/9.webp" alt="https://www.gv.com.sg/media/imagesresize/promo_gvmcogawa30.jpg"></a>'
 }
 
 window.onload = function () {
-    // Carousel
+    //* Carousel code starts here
 
-    // first one found under querySelector
+    // first image tracker found under querySelector
     const track = document.querySelector(".carousel__track"); /* first one*/
     console.log(track)
     const slides = Array.from(track.children);
@@ -155,8 +157,9 @@ window.onload = function () {
         hideShowArrows(slides, prevButton, nextButton, targetIndex);
 
 
-    })
+    }) // Carousel code ends here
 
+    //* Click "1", "2" or "3" to access which poster
     // For "cathaypromotions.html" Add event listener to poster
     document.getElementById('button1m').addEventListener("click", modifyText1);
     document.getElementById('button2m').addEventListener("click", modifyText2);
