@@ -1,3 +1,15 @@
+<!-- 
+    Filename: movieDetail.html
+    Data are scrapped using Python BeautifulSoup from IMDB and google. Youtube links are manually attained due to its ever changing html tags.
+    1) Recommendations list are reactive, once clicked, lead to Youtube video of its trailer
+    2) Image of actors are reactive, once clicked, lead to actor profile on IMDB official website
+    3) On button to click to lead to movie review page
+    4) Navigation cards are reactive
+    5) Click on LaBamBa logo to return to home screen (alternative to Navigation cards)
+    6) Pictures under "Gallery" are blur because I scrapped first 5 images from Google Image based on movie title. The images garnered are only thumbnail size, so that is why it is blur.
+    7) All the contents of `movieDetail.html` are scrapped, none are manually typed, hence it is scalable to make this page.
+-->
+
 <head>
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -9,6 +21,7 @@
     <link href="https://fonts.googleapis.com/css?family=Chivo:700|Overpass:400,700&display=swap" rel="stylesheet">
     <!-- Social Media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Styling CSS -->
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="movieDetail.css">
@@ -62,6 +75,8 @@
 </head>
 
 <body>
+    <a id="logo" href="index.html"><img id="logo" src="images/logo.png" alt=""></a>
+    <!-- Contents of movie details based on scrapped data -->
     <section class="mainBody">
         <div id="title_and_year"></div>
         <div id="poster_and_video"></div>
@@ -138,7 +153,8 @@
             </div>
         </div>
     </section>
-
+    <!-- Recommendations section -->
+    <!-- Every movie details page contains these fixed 5 recommended movies. This part is not scrapped -->
     <section class="recommendations">
         <aside class="recommend">
             <h1 class="h1Aside">Recommendations</h1>
@@ -173,11 +189,6 @@
 
 
 
-
-
-
-    <script> </script>
-
 </body>
 
 
@@ -188,9 +199,5 @@
 
 
 
-<!-- d3 add hyperlink: http://bl.ocks.org/d3noob/8150631 -->
-
-<!-- https://codepen.io/tyler-chipman/pen/qBPoGKE did not work -->
-<!-- https://appcode.app/how-to-create-an-html-carousel/ -->
-
+<!-- Tutorial on how to use d3 to add hyperlink to objects: http://bl.ocks.org/d3noob/8150631 -->
 <!-- Tutorial on search bar and filter table: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_filter_table -->

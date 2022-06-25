@@ -1,3 +1,6 @@
+/*
+    Filename: promotions.css
+ */
 /* h1 styling */
 h1{
     clear:both;
@@ -11,9 +14,18 @@ body{
     width: 90%;
     margin: auto;
 }
+/* center the paragraph */
+p#booking{
+    text-align: center;
+}
+/* center logo */
+img#logo{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 /* Adding text box within image */
-
 li.carousel__slide>div{
     position: absolute;
     bottom: 20px;
@@ -30,7 +42,8 @@ li.carousel__slide>div>p{
     color: rgba(255, 255, 255, 0.671);
 }
 
-/* Promotion styling */
+
+/* Promotion posters styling */
 div.col-1-1{
     position: relative;
     margin: auto;
@@ -72,27 +85,22 @@ div.buttonss{
     font-size: 1.1em;
     font-weight: bold;
 }
-
-/* carousell styling */
-div.carousel{
-    clear: both;
-}
-
 /* make hyperlink box smaller */
 a#promoPosterLink{
     padding: 0px;
     height: 400px;
 }
 
-/* center the paragraph */
-p#booking{
-    text-align: center;
+
+
+
+/* carousell styling */
+div.carousel{
+    clear: both;
 }
-/* center logo */
-img#logo{
-    margin-left: auto;
-    margin-right: auto;
-}
+
+
+
 /* Go to Booking website Button */
 #goToWebsite{
     margin: auto;
@@ -134,7 +142,7 @@ div#promotion1>a>img{
 	cursor: pointer;
 }
 
-/* Contact card */
+/* Navigation card */
 @media (min-width: 1000px) {
     .container {
       width: 900px;

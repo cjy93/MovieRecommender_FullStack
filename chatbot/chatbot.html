@@ -26,6 +26,7 @@ First, access the folder of your command prompt to where this file resides.
     https://youtu.be/eJMT2FovZsM 
     https://www.youtube.com/watch?v=n4XTy8M7zlU
 -->
+<!-- Do not delete any files in this folder. They are dependencies for this html to work. -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +36,7 @@ First, access the folder of your command prompt to where this file resides.
     <title>LaBamBa: Movie Recommender and Reviews</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../images/logo.ico">
-
+    <!-- Load CSS -->
     <link rel="stylesheet" href="chatbot.css">
     <!-- For the widget -->
     <!-- <link rel="stylesheet"
@@ -43,6 +44,7 @@ First, access the folder of your command prompt to where this file resides.
 </head>
 
 <body>
+    <!-- Styling Rasa webchat -->
     <style>
         .rw-conversation-container .rw-header {
             background-color: black;
@@ -68,6 +70,7 @@ First, access the folder of your command prompt to where this file resides.
             background-color: black;
         }
     </style>
+    <!-- Add configurations in order to serve the rasa chatbot on local web app -->
     <script>!(function () {
             let e = document.createElement("script"),
                 t = document.head || document.getElementsByTagName("head")[0];
@@ -87,8 +90,6 @@ First, access the folder of your command prompt to where this file resides.
                             fullScreenMode: true,
                             showMessageDate: true,
                             embedded: true,
-
-
                             // add other props here
                         },
                         null

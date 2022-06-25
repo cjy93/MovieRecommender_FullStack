@@ -1,3 +1,7 @@
+/* 
+	Filename: movieDetail_review.css
+*/
+/* Body Styling */
 body {
 	margin: 0 auto;
 	width: 80%;
@@ -5,7 +9,7 @@ body {
 	min-width: 640px;
 	font-size: 1.3em;
 }
-
+/* Article styling, to be on left side */
 article {
 	width: 65%;
 	float: left;
@@ -14,30 +18,41 @@ article {
     border: 10px;
 }
 
+p{
+    line-height: 1.6;
+}
+
+/* Section styling for credits, on right side */
+/* Aside has to be within section, so it will not float to the left side */
 section{
 	width: 20%;
 	float: right;
 	margin-right: 2%;
 }
-
-/* span.stars{
-    font-size: 100%; 
-    color: yellow;
-} */
-
-div.container{
-    clear:both;
-    justify-content: center;
-}
-
-p{
-    line-height: 1.6;
-}
-
 aside{
     font-size: 0.8em;
 }
 
+
+/* Navigation cards styling */
+div.container{
+    clear:both;
+    justify-content: center;
+}
+.cards {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 16px;
+	font-size: 1em;
+  }
+
+/* Navigation cards, Reduce back the font size, since the css above has enlarged the size in the white cards */
+div.card-white>h3, div.card-white>p{
+	font-size:1em;
+}
+
+
+/*  Rating stars image styling */
 img.icon-star-full {
 	width: 20px;
 	height: 20px;	
@@ -49,13 +64,12 @@ img.icon-star-half {
 }
 
 
-
+/* Movie Poster styling */
 img#poster{
 	height:315px;
 	padding:20px;
 	border: 0.5px solid lightgrey;
 }
-
 
 
 /* Stretching the footer to both ends of the web browser */
@@ -67,23 +81,7 @@ div.footer{
 	clear: both;
 }
 
-
-
-
-/* adjust card position since we now have 2 cards not 3 */
-.cards {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 16px;
-	font-size: 1em;
-  }
-
-/* Reduce back the font size, since the css above has enlarged the size in the white cards */
-div.card-white>h3, div.card-white>p{
-	font-size:1em;
-}
-  
-  
+/* Media Styling, for change of screen size */
   @media (min-width: 300px) {
 	.container {
 	  width: 400px;

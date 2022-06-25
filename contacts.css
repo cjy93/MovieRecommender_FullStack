@@ -1,3 +1,8 @@
+/* 
+Filename: contacts.css
+*/
+
+/* Page styling */
 body {
 	margin: 0 auto;
 	width: 40%;
@@ -27,7 +32,11 @@ p>a {
     color:rgb(175, 169, 169) ;
     text-decoration: underline;
 }
-
+/* allow the <p> and <a> tags to be same line such as the email and phone*/
+article a{
+    display: inline;
+    white-space: nowrap;
+  }
 
 /* form styling */
 form {
@@ -62,7 +71,6 @@ form {
 	display: inline-block;
 	width: 120px;
  }
- 
 
  
  textarea {
@@ -89,7 +97,24 @@ form {
 	width: 240px;
  }
 
-/* Web and Mobile styling */
+  /* When the submission is successful, there will be a green success message */
+  .green {
+	color: green;
+	background-color: rgba(0, 128, 0, 0.3);
+	padding: 20px;
+	text-align: center;
+
+}
+
+/* When the submission is unsuccessful, there will be a red alert message */
+.red {
+	color: red;
+	background-color: rgba(255, 0, 0, 0.3);
+	padding: 20px;
+	text-align: center;
+}
+
+/* Web and Mobile styling for Navigation cards*/
 @media (min-width: 500px) {
 	.container {
 	  width: 550px;
@@ -117,8 +142,4 @@ form {
 	}
   }
   
-  /* allow the <p> and <a> tags to be same line */
-  article a{
-    display: inline;
-    white-space: nowrap;
-  }
+  

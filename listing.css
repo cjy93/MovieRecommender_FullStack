@@ -1,8 +1,12 @@
-/* Table Styles */
+/* 
+    Filename: listing.css
+*/
+
+/* Page Style */
 html{
     background-color: black;
 }
-
+/* Table Styles */
 table#table_messages{
     background: black;
     border: 15px outset rgb(247, 243, 243);
@@ -16,7 +20,7 @@ table#table_messages{
     
  }
 
- /* table style that works with div only */
+/* Table with scrolling function, centralised */
  #table_container{
     overflow-y: auto;
     height: 1000px;
@@ -25,7 +29,7 @@ table#table_messages{
     margin-right: auto;
  }
 
- /* styling for each cell  */
+ /* Styling for each cell in table */
 table#table_messages th, table#table_messages td{
     border: 1px solid white;
     padding: 5px;
@@ -35,7 +39,7 @@ table#table_messages th, table#table_messages td{
     font-size: 1.2em;
  }
 
-/* styling for hyperlinks */
+/* Styling for hyperlinks */
 a {
 	color: white;
 	text-decoration: none;
@@ -55,7 +59,9 @@ a:focus {
 a:hover, a:active {
 	outline: 0;
 }
-/* This is for the white-cards, as the background is white, the font cannot be seen */
+
+/* Navigation cards */
+/* Make sure the font are not white upon hover. So we put black color */
 .card-white:hover, .card-white:active {
 	color: rgb(26, 19, 19);
 	cursor: pointer;

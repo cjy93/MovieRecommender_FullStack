@@ -167,13 +167,27 @@ div.footer p{
     cursor: pointer;
   }
 
-  /* logo styling */
-  #logo {
-    display: block;
-    height: 90px;
-    border: 1px solid white;
+/* logo styling */
+img#logo {
+  display: block;
+  height: 90px;
+  border: 1px solid grey;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+}
 
-  }
+img#logo:hover{  
+  border: 2px solid white;
+}
+
+a#logo{
+  margin-bottom: 0;
+}
+
+a#logo:hover{
+   background-color: black;
+}
   /* Social Media Icons Styling */
   .fa {
     padding: 20px;

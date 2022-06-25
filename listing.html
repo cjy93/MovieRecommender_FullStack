@@ -1,3 +1,12 @@
+<!-- 
+    Filename: listing.html
+    Data are scrapped with Python BeautifulSoup from IMDB
+    1) Search bar is reactive. Type partial name of the movie title and the table will filter
+    2) Movie posters and titles are clickable, will lead to the movieDetail.html page
+    3) Navigation cards are reactive
+    4) Click on LaBamBa logo to return to home screen (alternative to Navigation cards)
+ -->
+
 <head>
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -38,10 +47,10 @@
             }
         }
         window.onload = function () {
-            // in javascript no higher level access
-            // passing the var to d3 object may not have any outputs
+            // Self notes:
+            // in javascript no higher level access passing the var to d3 object may not have any outputs
             // d3 object is not a dom object
-            // js cannot access higher folder level due to security concenrs
+            // js cannot access higher folder level due to security concerns, do put "data" folder within this dir path
             d3.csv("data/2022_movies_final_merged.csv")
                 .row(function (d) {
                     id = d.id
@@ -74,27 +83,23 @@
                 }
                 var href = $(this).attr("href"); // link to where you want to head to
                 // var text = $(this).text() // movie name
-                // alert("You're trying to go to " + id);
-                // add localStorage so I know which link to go to
+                // add localStorage taking 'id' so I know which of the html files in "reviews_per_movie" folder I should go to
                 localStorage['id'] = id;
                 location.href('movieDetail.html')
             });
-
-            // local storage for the name so in the next page you can generate the movieDetail.html based on this information
-
-            // first scrape the movie star avatar photos
         }
-
-
-
     </script>
 </head>
 
 <body>
+    <!-- LaBamBa Logo -->
+    <a id="logo" href="index.html"><img id="logo" src="images/logo.png" alt=""></a>
+    <!-- Search Bar -->
     <div>
         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for movie title"
             title="Type in a movie name">
     </div>
+    <!-- Table -->
     <div id="table_container">
         <table id="table_messages">
             <tr class="header">
@@ -109,8 +114,7 @@
         </table>
     </div>
 
-
-    <!-- contact card -->
+    <!-- Navigation card -->
     <div class="container">
         <h2>Explore more here</h2>
         <!-- Cards container -->
@@ -125,9 +129,6 @@
                     <p>Go to home page or find Promotions!</p>
                 </div>
             </a>
-
-
-
         </div>
     </div>
 
@@ -153,9 +154,6 @@
 
 
 
-<!-- d3 add hyperlink: http://bl.ocks.org/d3noob/8150631 -->
-
-<!-- https://codepen.io/tyler-chipman/pen/qBPoGKE did not work -->
-<!-- https://appcode.app/how-to-create-an-html-carousel/ -->
+<!-- Tutorial for d3 add hyperlink: http://bl.ocks.org/d3noob/8150631 -->
 
 <!-- Tutorial on search bar and filter table: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_filter_table -->

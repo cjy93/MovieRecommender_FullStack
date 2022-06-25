@@ -1,3 +1,12 @@
+<!-- 
+    Filename: cathaypromotions.html
+    This file contains
+    1) Button to click where it will lead to the Cathay Cineplexes landing page
+    2) Reactive Promotions posters. Once you click you will enter the official detail page from the Cinema website. You can also click on buttons to navigate the different posters
+    3) Reactive Carousell section for latest movies
+    4) Navigation cards are reactive
+    5) Click on LaBamBa logo to return to home screen (alternative to Navigation cards)
+ -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,10 +21,7 @@
     <link href="https://fonts.googleapis.com/css?family=Chivo:700|Overpass:400,700&display=swap" rel="stylesheet">
     <!-- Social Media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-
-    <!-- styling -->
+    <!-- styling CSS -->
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="promotions.css">
@@ -24,7 +30,7 @@
 
 <body>
     <style>
-        /* hide the unnecessary buttons (we need all buttons so JS script will run) */
+        /* hide the unnecessary buttons (we need all buttons so JS script will run, because JS will be looking for all the possible buttons from button1m to button9m) */
         #button4m,
         #button5m,
         #button6m,
@@ -35,7 +41,8 @@
         }
     </style>
 
-    <img id="logo" src="images/logo.png" alt="">
+    <!-- Logo -->
+    <a id="logo" href="index.html"><img id="logo" src="images/logo.png" alt=""></a>
     <!-- Direct to booking website -->
     <h1 class="heading">Book Your Tickets at Cathay now!</h1>
     <p id="booking">Click the button below to go to Cathay Cineplexes's Official Website!</p>
@@ -49,6 +56,7 @@
             <a id="promoPosterLink" href="https://www.cathaycineplexes.com.sg/promotion-detail.aspx?id=2987"><img
                     id="promoPosterImg" src="https://www.cathaycineplexes.com.sg/images/3Carousel-LR.jpg" alt=""></a>
         </div>
+        <!-- Buttons to click to switch promotional posters -->
         <div class="buttonss">
             <button class="buttonsm" id="button1m" value="button1">1</button>
             <button class="buttonsm" id="button2m" value="button2">2</button>
@@ -61,16 +69,15 @@
             <button class="buttonsm" id="button8m" value="button8">2</button>
             <button class="buttonsm" id="button9m" value="button9">3</button>
         </div>
-
-
     </div>
+
+    <!-- Import javascript -->
     <script src="about.js">
 
     </script>
 
 
     <!-- latest movies -->
-
     <h1 class="heading">Latest Movies at Cathay!</h1>
     <!-- Carousel section -->
     <div class="carousel">
@@ -122,14 +129,14 @@
             <button class="carousel__indicator"></button>
         </div>
     </div>
+    <!-- Add space between posters and Navigation cards -->
     <br><br><br>
 
-    <!-- contact card -->
+    <!-- Navigation cards -->
     <div class="container">
         <h2>Explore more here</h2>
         <!-- Cards container -->
         <div class="cards">
-
             <!-- Home -->
             <a href="index.html">
                 <div class="card-white">
@@ -139,7 +146,7 @@
                     <p>Go to home page or find Promotions!</p>
                 </div>
             </a>
-            <!-- Promotion list -->
+            <!-- Back to previous page -->
             <a href="about.html">
                 <div class="card-white">
                     <img src="https://media.istockphoto.com/photos/letterpress-type-about-us-picture-id652180044?b=1&k=20&m=652180044&s=170667a&w=0&h=YHPxcUwGEVQWt4TV6uxMDcHkcBlhQ2I6tZ4-8J0DzTE="
@@ -148,9 +155,6 @@
                     <p>Go to previous page!</p>
                 </div>
             </a>
-
-
-
         </div>
     </div>
 

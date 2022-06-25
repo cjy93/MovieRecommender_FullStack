@@ -1,3 +1,7 @@
+/* 
+	Filename: movieDetail.css
+*/
+/* body styling */
 body {
 	margin: 0 auto;
 	width: 95%;
@@ -14,16 +18,6 @@ body > aside#recommend {
 	margin-right: 2%;
 }
 
-/* span.stars{
-    font-size: 100%; 
-    color: yellow;
-} */
-
-div.container{
-    clear:both;
-    justify-content: center;
-}
-
 p{
     line-height: 1.6;
 }
@@ -31,6 +25,7 @@ p{
 aside{
     font-size: 0.8em;
 }
+
 
 
 /* Star rating symbol styling */
@@ -44,7 +39,7 @@ img.icon-star-half {
 	height: 20px;
 }
 
-/* poster and video styling */
+/* Poster and video styling */
 div#poster_and_video{
 	justify-content: center;
 	margin-left: 0%;
@@ -86,10 +81,6 @@ div.footer{
 	border: 1px solid white;
 	height: 180px;
 	width: auto;
-}
-/* Footer font white */
-div.footer p{
-	color: white;
 }
 
 /* make some room for "recommendations" segment on the right */
@@ -141,10 +132,6 @@ h1.h1Aside{
 	border:none;
 }
 
-/* Shift "Explore more here" from the header of the cards back to proper position */
-div.container>h2{
-	margin-left: 10px; 
-}
 
 
 
@@ -177,10 +164,45 @@ div.container>h2{
 	font-size: 1em;
   }
   
+/* Navigation Cards styling */
+div.container{
+    clear:both;
+    justify-content: center;
+}
+
+/* Shift "Explore more here" from the header of the cards back to proper position */
+div.container>h2{
+	margin-left: 10px; 
+}
+
 /* Reduce back the font size, since the css above has enlarged the size in the white cards */
 div.card-white>h3, div.card-white>p{
 	font-size:1.1em;
 }
+/* whitecards, bring effect back to the whitecards to show grey background when hover*/
+.container a:hover{
+	background-color: grey;
+	color: black;
+	cursor: pointer;
+}
+/* whitecards, bring back the original grey font before hover */
+.container p{
+	color: rgb(27, 27, 27);
+	/* color: white; */
+}
+/* White cards. This is for the white-cards, as the background is white, the font cannot be seen */
+.card-white:hover, .card-white:active {
+	color: rgb(26, 19, 19);
+	cursor: pointer;
+}
+
+
+
+/* Footer font white */
+div.footer p{
+	color: white;
+}
+
   
   @media (min-width: 300px) {
 	.container {
@@ -252,19 +274,3 @@ section.recommendations p:hover{
 	font-weight: 1000;
 }
 
-/* whitecards, bring effect back to the whitecards to show grey background when hover*/
-.container a:hover{
-	background-color: grey;
-	color: black;
-	cursor: pointer;
-}
-/* whitecards, bring back the original grey font before hover */
-.container p{
-	color: rgb(27, 27, 27);
-	/* color: white; */
-}
-/* White cards. This is for the white-cards, as the background is white, the font cannot be seen */
-.card-white:hover, .card-white:active {
-	color: rgb(26, 19, 19);
-	cursor: pointer;
-}

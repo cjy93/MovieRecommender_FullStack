@@ -1,6 +1,7 @@
 /*   
    Filename: contacts_validate.css
-    This file is only meant to validate the fields in the css
+    This file is only meant to validate the fields in the "contacts.html"
+    Extracted from Tutorial 7 or Practical 7a
 */
 
 
@@ -14,6 +15,7 @@ input:focus, select:focus, textarea:focus{
  input#phoneBox:focus:valid,
  input#email:focus:valid
  {
+    /* Url images from Practical 7a */
     background: rgb(220, 255, 220) url(data/form_valid.png) 
     right/contain no-repeat;
  }
@@ -21,6 +23,7 @@ input:focus, select:focus, textarea:focus{
  input#phoneBox:focus:invalid,
  input#email:focus:invalid
  {
+    /* Url images from Practical 7a */
      background: rgb(255, 230, 230) url(data/form_invalid.png)
      right/contain no-repeat;
  }

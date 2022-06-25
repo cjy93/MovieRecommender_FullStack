@@ -1,3 +1,12 @@
+<!-- 
+    Filename: movieDetail_Review.html
+    Data are scrapped with Python BeautifulSoup from IMDB and Google Images. Youtube links are manually collected because of its ever changing tag class and id.
+    1) Displays article content on left, credits on right
+    2) Calls in the article content based on localStorage variable(storing `id`) from 'listing.html'.
+    3) Article content loaded from one of the html file from folder `reviews_per_movie`. Find the index number that matches the filename like '<indexNumber>.html'
+    4) Navigation cards are reactive
+    5) Click on LaBamBa logo to return to home screen (alternative to Navigation cards)
+ -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +24,7 @@
     <!-- Social Media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="about.js"></script>
+    <!-- Styling CSS -->
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="movieDetail_Review.css">
@@ -51,9 +61,9 @@
 
         // To check which movie I should display for Review based on the last movie title/name chosen in `listing.html`
         window.onload = function () {
-            //     '<div w3-include-html="reviews_per_movie/{{lo}}.html"></div>'           // )
             console.log("localstorage", localStorage['id'])
             var i = localStorage['id']
+            // load csv file
             d3.csv("data/2022_movies_final_merged.csv")
                 // filter the row corresponding with the id in localStorage['id']
                 .get(function (data) {
@@ -74,17 +84,16 @@
 </head>
 
 <body>
+    <a id="logo" href="index.html"><img id="logo" src="images/logo.png" alt=""></a>
     <div id="movieName">
-
-
     </div>
-
-
+    <!-- Script loads the html from one of the html files in `reviews_per_movie` based on id chosen by localStorage['id'] -->
     <script>
         $("#movieName").append("<div w3-include-html='reviews_per_movie/" + localStorage['id'] + ".html'></div>");
         includeHTML();
     </script>
-    <!-- contact card -->
+
+    <!-- Navigation card -->
     <div class="container">
         <h2>Explore more here</h2>
         <!-- Cards container -->

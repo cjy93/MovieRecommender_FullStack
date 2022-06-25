@@ -3,7 +3,10 @@ Filename: contacts.html
 This file allows user to find contact information about LaBamBa.
 If users have further queries or feedback, they can fill in the form below.
 This form will send the outputs to a Google sheet tagged to my personal email. If you try my app, you can check the output at this sheet : https://docs.google.com/spreadsheets/d/1Sj06m3z4Z06dGNjL7VlEnlXbIlCKOWTjZqtOF2Rx7HA/edit?usp=sharing
- -->
+Google sheet column names are to be the same as the `name` attribute in the form boxes.
+Navigation cards are reactive.
+Click on LaBamBa logo to return to home screen (alternative to Navigation cards).
+-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +27,7 @@ This form will send the outputs to a Google sheet tagged to my personal email. I
     <link rel="stylesheet" href="contacts.css">
     <link rel="stylesheet" href="contacts_validate.css">
     <script>
-        // cnanot access higher level due to security concenrs
+
 
         window.onload = function () {
 
@@ -33,24 +36,7 @@ This form will send the outputs to a Google sheet tagged to my personal email. I
 </head>
 
 <body>
-    <style>
-        /* When the submission is successful, change the message to green */
-        .green {
-            color: green;
-            background-color: rgba(0, 128, 0, 0.3);
-            padding: 20px;
-            text-align: center;
-
-        }
-
-        .red {
-            color: red;
-            background-color: rgba(255, 0, 0, 0.3);
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
-
+    <a id="logo" href="index.html"><img id="logo" src="images/logo.png" alt=""></a>
     <h1>Contact Us!</h1>
     <p>We offer offline support via our email follow-ups! Otherwise, you can send in your query in the form below! :)
     </p>
@@ -146,7 +132,7 @@ This form will send the outputs to a Google sheet tagged to my personal email. I
 
     </section>
 
-    <!-- contact card -->
+    <!-- Navigation card -->
     <div class="container">
         <h2>Explore more here</h2>
         <!-- Cards container -->

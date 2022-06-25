@@ -1,3 +1,5 @@
+/* Filename: about.css */
+/* Carousell styling */
 html{
     background-color: black;
 }
@@ -96,6 +98,7 @@ html{
     display: none;
 }
 
+/* About Us styling */
 section.aboutUs{
     width: 50%;
     margin-left: auto;
