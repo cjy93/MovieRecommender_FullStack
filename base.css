@@ -1,0 +1,28 @@
+/* Basic styles to be used with all devices and under all conditions */
+
+
+
+article, aside, figcaption, figure,
+footer, header, main, nav, section { 
+   display: block;
+}
+
+
+
+
+Set the default page element styles
+ 
+body {
+   line-height: 1.2em;
+} ul, ol {
+   list-style: none;
+}
+
+nav ul {
+   list-style: none;
+   list-style-image: none;
+}
+
+nav a {
+   text-decoration: none;
+} 

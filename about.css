@@ -2,6 +2,13 @@
 /* Carousell styling */
 html{
     background-color: black;
+    min-width: 1024px;
+    margin: auto;
+}
+
+body{
+    width: 100%;
+    margin: 0 auto;
 }
 .carousel{
     position: relative;
@@ -17,7 +24,8 @@ html{
     /* crops the image without making it out of dimension */
     /* object-fit: cover;   */
     object-fit: contain;
-    position: relative;
+    /* position: relative; */
+    max-width: 100%;
 }
 
 .carousel__track-container{
@@ -99,8 +107,19 @@ html{
 }
 
 /* About Us styling */
-section.aboutUs{
-    width: 50%;
+div.aboutUs{
+    /* width: 85%; */
     margin-left: auto;
     margin-right: auto;
+    width: 900px;
+    margin: 60px auto;
 }
+.aboutUs> p{
+    margin: auto;
+    width: 100%;
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid black;
+ }
+
+

@@ -1,6 +1,6 @@
 <!-- 
     Filename: movieDetail.html
-    Data are scrapped using Python BeautifulSoup from IMDB and google. Youtube links are manually attained due to its ever changing html tags.
+    Data are scrapped using Python BeautifulSoup from IMDB and google. Youtube links are manually attained due to its ever changing html tags. ReleaseDate manually attained due to last min realisation that I missed it during scrapping
     1) Recommendations list are reactive, once clicked, lead to Youtube video of its trailer
     2) Image of actors are reactive, once clicked, lead to actor profile on IMDB official website
     3) On button to click to lead to movie review page
@@ -22,6 +22,7 @@
     <!-- Social Media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Styling CSS -->
+    <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="movieDetail.css">
@@ -47,6 +48,7 @@
                     $('#title_and_year').append("<h1>" + d.movie + " (" + d.year + ") </h1>")
                     // Allow video to autoplay with syntax "?autoplay=1&mute=1" right behind emded Youtube link, ref:https://stackoverflow.com/questions/7281765/how-to-embed-an-autoplaying-youtube-video-in-an-iframe
                     $('#poster_and_video').append("<img id='poster' src='" + d.small_posters + "'><iframe id='video' src='" + d.youtube + "?autoplay=1&mute=1' allow='autoplay'></iframe>")
+                    $('#release_date').append("<h3>Release Date</h3><p>" + d.release_date + "</p>")
                     $('#storyPlot').append("<h3>StoryPlot</h3><p>" + d.storyPlot + "</p>")
                     $('#rating_and_timing').append("<h3>LaBamBa Rating</h3><p><img title='star-full' class='icon-star-full' src='https://img.icons8.com/fluency/344/star.png'></img>" + d.imdb + "<br>(" + d.votes + " votes)</p><h3>Runtime</h3><p>" + d.runtime + " mins</p>")
                     $('#metascore').append("<h3>Metascore</h3><p>" + d.metascore + "</p>")
@@ -80,6 +82,7 @@
     <section class="mainBody">
         <div id="title_and_year"></div>
         <div id="poster_and_video"></div>
+        <div id="release_date"></div>
         <div id="storyPlot"></div>
         <div id="rating_and_timing"></div>
         <div id="metascore"></div>
