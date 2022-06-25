@@ -23,6 +23,18 @@
 </head>
 
 <body>
+    <style>
+        /* hide the unnecessary buttons (we need all buttons so JS script will run) */
+        #button1m,
+        #button2m,
+        #button3m,
+        #button7m,
+        #button8m,
+        #button9m {
+            display: none;
+        }
+    </style>
+
     <img id="logo" src="images/logo.png" alt="">
     <!-- Direct to booking website -->
     <h1 class="heading">Book Your Tickets at Shaw now!</h1>
@@ -34,24 +46,34 @@
     <h1 class="heading">Promotions at Shaw!</h1>
     <div class="promotions">
         <div class="col-1-1" id="promotion1">
-            <a id="promoPosterLink" href="https://www.cathaycineplexes.com.sg/images/3Carousel-LR.jpg"><img
-                    id="promoPosterImg" src="https://www.cathaycineplexes.com.sg/images/3Carousel-LR.jpg" alt=""></a>
+            <a id="promoPosterLink"
+                href="https://shawsgqk.gumlet.io/fetch/https://shawsgcdn.azureedge.net/prd/content/images/promotions/default/en-sg/2022-06-23-FB-Poster-Elvis.jpg?w=360&dpr=1.0"><img
+                    id="promoPosterImg"
+                    src="https://shawsgqk.gumlet.io/fetch/https://shawsgcdn.azureedge.net/prd/content/images/promotions/default/en-sg/2022-06-23-FB-Poster-Elvis.jpg?w=360&dpr=1.0"
+                    alt=""></a>
         </div>
         <div class="buttonss">
-            <button class="buttonsm" id="button1m" value="button1">1</button>
-            <button class="buttonsm" id="button2m" value="button2">2</button>
-            <button class="buttonsm" id="button3m" value="button3">3</button>
+            <button class="buttonsm" id="button4m" value="button4">1</button>
+            <button class="buttonsm" id="button5m" value="button5">2</button>
+            <button class="buttonsm" id="button6m" value="button6">3</button>
+            <!-- hidden buttons, or else the javascript will not run as they are looking for the buttons id -->
+            <button class="buttonsm" id="button1m" value="button7">1</button>
+            <button class="buttonsm" id="button2m" value="button8">2</button>
+            <button class="buttonsm" id="button3m" value="button9">3</button>
+            <button class="buttonsm" id="button7m" value="button7">1</button>
+            <button class="buttonsm" id="button8m" value="button8">2</button>
+            <button class="buttonsm" id="button9m" value="button9">3</button>
         </div>
 
 
     </div>
-
+    <script src="about.js">
+    </script>
 
 
     <!-- latest movies -->
-    <script src="about.js">
 
-    </script>
+
     <h1 class="heading">Latest Movies at Cathay!</h1>
     <!-- Carousel section -->
     <div class="carousel">

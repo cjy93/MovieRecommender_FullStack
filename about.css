@@ -83,8 +83,13 @@ html{
 }
 
 .carousel__button{
+    padding: 12px;
     background-color: white;
     opacity: 0.5;
+}
+
+.carousel__button:hover{
+    opacity: 1;
 }
 
 .is-hidden{

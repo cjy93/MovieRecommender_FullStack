@@ -113,7 +113,16 @@ img#logo{
 a#bookingLink{
     margin-bottom: 0px;
 }
-/* Add effects to button when hover */
+div.buttonss{
+    margin-top: -50px;
+}
+/* fit the poster height too the size of <div> for the promotional posters */
+div#promotion1>a>img{
+    height: 100%;
+    width: auto;
+    background-size: cover;
+}
+/* Add effects to "Click here to go to xxx" button when hover */
 #goToWebsite:hover, .buttonsm:hover{
     background-color: rgb(252, 247, 247);
 	font-weight: 600;

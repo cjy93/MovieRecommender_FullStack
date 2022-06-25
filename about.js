@@ -3,17 +3,46 @@
 // This section is for "cathayPromotions.html"
 function modifyText1() {
     var posterImage = document.getElementById("promotion1")
-    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.cathaycineplexes.com.sg/images/3Carousel-LR.jpg"><img id="promoPosterImg" src="https://www.cathaycineplexes.com.sg/images/3Carousel-LR.jpg" alt=""></a>'
+    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.cathaycineplexes.com.sg/promotion-detail.aspx?id=2987"><img id="promoPosterImg" src="https://www.cathaycineplexes.com.sg/images/3Carousel-LR.jpg" alt=""></a>'
 }
 function modifyText2() {
     var posterImage = document.getElementById("promotion1")
-    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.cathaycineplexes.com.sg/images/2Carousel-LR.jpg"><img id="promoPosterImg" src="https://www.cathaycineplexes.com.sg/images/2Carousel-LR.jpg" alt=""></a>'
+    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.cathaycineplexes.com.sg/promotion-detail.aspx?id=2959"><img id="promoPosterImg" src="https://www.cathaycineplexes.com.sg/images/2Carousel-LR.jpg" alt=""></a>'
 }
 function modifyText3() {
     var posterImage = document.getElementById("promotion1")
-    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.cathaycineplexes.com.sg/images/15Sample%20(1200x580).jpg"><img id="promoPosterImg" src="https://www.cathaycineplexes.com.sg/images/15Sample%20(1200x580).jpg" alt=""></a>'
+    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.cathaycineplexes.com.sg/movie-detail.aspx?id=HO00001333&utm_source=social&utm_medium=instagram_skedlink&utm_campaign=Minions2TheRiseOfGru&utm_term=EngSub"><img id="promoPosterImg" src="https://www.cathaycineplexes.com.sg/images/15Sample%20(1200x580).jpg" alt=""></a>'
 }
 
+// this section is for 'shawpromotions.html'
+function modifyText4() {
+    var posterImage = document.getElementById("promotion1")
+    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.shaw.sg/promo-details/facebook--elvis-movie-premium-pack/CA-IG-ELVIS"><img id="promoPosterImg" src="https://shawsgqk.gumlet.io/fetch/https://shawsgcdn.azureedge.net/prd/content/images/promotions/default/en-sg/2022-06-23-FB-Poster-Elvis.jpg?w=360&dpr=1.0" alt=""></a>'
+}
+function modifyText5() {
+    var posterImage = document.getElementById("promotion1")
+    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.shaw.sg/promo-details/instagram--minions-2--the-rise-of-gru/CA-IG-MINI2"><img id="promoPosterImg" src="https://shawsgqk.gumlet.io/fetch/https://shawsgcdn.azureedge.net/prd/content/images/promotions/default/en-sg/Popcorn-set-(Shaw).jpg?w=360&dpr=1.0" alt=""></a>'
+}
+function modifyText6() {
+    var posterImage = document.getElementById("promotion1")
+    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.shaw.sg/promo-details/combo-of-the-month--marvel-studios-doctor-strange-in-the-multiverse-of-madness-/CA-SH-ComboS"><img id="promoPosterImg" src="https://shawsgqk.gumlet.io/fetch/https://shawsgcdn.azureedge.net/prd/content/images/promotions/default/en-sg/MicrosoftTeams-image%20(1).png?w=360&dpr=1.0" alt=""></a>'
+}
+
+
+// this section is for 'goldenVpromotions.html'
+function modifyText7() {
+    var posterImage = document.getElementById("promotion1")
+    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.gv.com.sg/GVPromotionDetails#/promotion/6f352109-ff2c-4d6e-a85b-5311251dc0ad"><img id="promoPosterImg" src="https://media.gv.com.sg/imagesresize/promo_toystudio_2locations.jpg" alt=""></a>'
+
+}
+function modifyText8() {
+    var posterImage = document.getElementById("promotion1")
+    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.gv.com.sg/GVPromotionDetails#/promotion/ca933eb0-4667-451a-88f9-7ce575c52302"><img id="promoPosterImg" src="https://media.gv.com.sg/imagesresize/promo_gcprecautionary_Apr22.jpg" alt=""></a>'
+}
+function modifyText9() {
+    var posterImage = document.getElementById("promotion1")
+    posterImage.innerHTML = '<a id="promoPosterLink" href="https://www.gv.com.sg/GVPromotionDetails#/promotion/dfb38c1c-3349-4f44-b763-ddfa93c67ed2"><img id="promoPosterImg" src="https://www.gv.com.sg/media/imagesresize/promo_gvmcogawa30.jpg" alt=""></a>'
+}
 
 window.onload = function () {
     // Carousel
@@ -132,6 +161,14 @@ window.onload = function () {
     document.getElementById('button1m').addEventListener("click", modifyText1);
     document.getElementById('button2m').addEventListener("click", modifyText2);
     document.getElementById('button3m').addEventListener("click", modifyText3);
+    // For "shawpromotions.html" Add event listener to poster
+    document.getElementById('button4m').addEventListener("click", modifyText4);
+    document.getElementById('button5m').addEventListener("click", modifyText5);
+    document.getElementById('button6m').addEventListener("click", modifyText6);
+    // For "goldenVpromotions.html" Add event listener to poster
+    document.getElementById('button7m').addEventListener("click", modifyText7);
+    document.getElementById('button8m').addEventListener("click", modifyText8);
+    document.getElementById('button9m').addEventListener("click", modifyText9);
 
 }
 // Tutorial On how To Make Carousell From JS : https://www.youtube.com/watch?v=gBzsE0oieio

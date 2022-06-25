@@ -23,35 +23,55 @@
 </head>
 
 <body>
+    <style>
+        /* hide the unnecessary buttons (we need all buttons so JS script will run) */
+        #button1m,
+        #button2m,
+        #button3m,
+        #button4m,
+        #button5m,
+        #button6m {
+            display: none;
+        }
+    </style>
+
     <img id="logo" src="images/logo.png" alt="">
     <!-- Direct to booking website -->
-    <h1 class="heading">Book Your Tickets at Cathay now!</h1>
-    <p id="booking">Click the button below to go to Cathay Cineplexes's Official Website!</p>
-    <a id="bookingLink" href="https://www.cathaycineplexes.com.sg/"><button id="goToWebsite">Click here to go to
-            Cathay!</button></a>
+    <h1 class="heading">Book Your Tickets at Golden Village now!</h1>
+    <p id="booking">Click the button below to go to Golden Village's Official Website!</p>
+    <a id="bookingLink" href="https://www.gv.com.sg/"><button id="goToWebsite">Click here to go to
+            GV!</button></a>
 
     <!-- latest promotions -->
-    <h1 class="heading">Promotions at Cathay!</h1>
+    <h1 class="heading">Promotions at Golden Village!</h1>
     <div class="promotions">
         <div class="col-1-1" id="promotion1">
-            <a id="promoPosterLink" href="https://www.cathaycineplexes.com.sg/images/3Carousel-LR.jpg"><img
-                    id="promoPosterImg" src="https://www.cathaycineplexes.com.sg/images/3Carousel-LR.jpg" alt=""></a>
+            <a id="promoPosterLink"
+                href="https://www.gv.com.sg/GVPromotionDetails#/promotion/6f352109-ff2c-4d6e-a85b-5311251dc0ad"><img
+                    id="promoPosterImg" src="https://media.gv.com.sg/imagesresize/promo_toystudio_2locations.jpg"
+                    alt=""></a>
         </div>
         <div class="buttonss">
-            <button class="buttonsm" id="button1m" value="button1">1</button>
-            <button class="buttonsm" id="button2m" value="button2">2</button>
-            <button class="buttonsm" id="button3m" value="button3">3</button>
+            <button class="buttonsm" id="button7m" value="button7">1</button>
+            <button class="buttonsm" id="button8m" value="button8">2</button>
+            <button class="buttonsm" id="button9m" value="button9">3</button>
+            <!-- Trick: hidden buttons, or else the 'about.js' will not run as they are looking for the buttons id -->
+            <button class="buttonsm" id="button1m" value="button7">1</button>
+            <button class="buttonsm" id="button2m" value="button8">2</button>
+            <button class="buttonsm" id="button3m" value="button9">3</button>
+            <button class="buttonsm" id="button4m" value="button7">1</button>
+            <button class="buttonsm" id="button5m" value="button8">2</button>
+            <button class="buttonsm" id="button6m" value="button9">3</button>
         </div>
-
+        <script src="about.js">
+        </script>
 
     </div>
 
 
 
     <!-- latest movies -->
-    <script src="about.js">
 
-    </script>
     <h1 class="heading">Latest Movies at Cathay!</h1>
     <!-- Carousel section -->
     <div class="carousel">

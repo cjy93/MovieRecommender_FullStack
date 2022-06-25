@@ -73,6 +73,10 @@ div.footer{
 }
 
 /* Gallery styling */
+#gallery>h3{
+	/* make gallery header float to left side */
+	clear: both;
+}
 #gallery>div {
 	height:190px;
 	padding: 2%;
@@ -128,6 +132,7 @@ div.actorNames, div.actorAs{
 	display: block;
 	width: 100%;
  }
+
 
 /* Select h1 from the "recommendations" panel to align properly */
 h1.h1Aside{
