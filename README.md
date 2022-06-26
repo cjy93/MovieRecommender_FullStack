@@ -2,6 +2,12 @@
 ## Author: Chan Jia Yi
 ## Date: 26 Jun 2022
 
+# Scrapping Data
+1) Python Codes located in '2022_ScrapeMovies.ipynb'
+2) Python requirements set up in 'requirements.txt'
+3) Data located in  '/data'
+4) Other images located in '/images'
+
 # Agenda
 - Setting Up
 - Index.html
