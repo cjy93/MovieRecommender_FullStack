@@ -146,6 +146,9 @@ And other set up steps from: https://www.youtube.com/watch?v=s9XZui6zRPw
 ![image](https://user-images.githubusercontent.com/40426221/175814767-cd3f275d-98eb-45a5-a589-e4a4f27751f3.png)
 Rasa chatbot served on Rasa Webchat widget. Rasa linked to server via localhost deployment
 
+# Further work
+1) Deploy webapp and Rasa server on Cloud providers
+2) Use Hive and cloud databases to schedule the scrapping data process to database.
 
 
 
